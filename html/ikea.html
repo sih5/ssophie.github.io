@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA 이케아</title>
+    <!-- jQuery -->
+    <script src="../script/jquery/jquery-3.7.1.min.js"></script>
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="../script/slick/slick.css">
+    <script src="../script/slick/slick.min.js"></script>
+    <!-- Custom CSS & Script -->
+    <link rel="stylesheet" href="../css/ikea.css">
+    <link rel="icon" href="../images/ikea/favicon.ico">
+    <script src="../script/ikea.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- ########### 상단 시작 ###########-->
+        <!-- 헤더 -->
+        <header id="header">
+            <!-- 헤더 gnb -->
+            <div class="gnb">
+                <div class="wrap_inner">
+                    <h1 class="logo"><a href="#"><img src="../images/ikea/logo.svg"></a></h1>
+                    <ul class="menu">
+                        <li><a href="#none">LOGIN</a></li>
+                        <li><a href="#none">JOIN</a></li>
+                        <li><a href="#none">MYPAGE</a></li>
+                        <li><a href="#none">CART (<strong class="ea_cart">0</strong>)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 헤더 lnb -->
+            <div class="lnb">
+                <div class="wrap_inner">
+                    <ul class="category">
+                        <li><a href="#none" class="b">NEW</a></li>
+                        <li><a href="#none" class="b circle">BEST</a></li>
+                        <li onmouseover="$('.bed').show();" onmouseleave="$('.bed').hide();"><a href="#none">침실</a></li>
+                        <li onmouseover="$('.living').show();" onmouseleave="$('.living').hide();"><a href="#none">거실</a></li>
+                        <li onmouseover="$('.kitchen').show();" onmouseleave="$('.kitchen').hide();"><a href="#none">주방</a></li>
+                        <li onmouseover="$('.bath').show();" onmouseleave="$('.bath').hide();"><a href="#none">욕실</a></li>
+                        <li onmouseover="$('.kids').show();" onmouseleave="$('.kids').hide();"><a href="#none">어린이 IKEA</a></li>
+                        <li><a href="#none">PROMOTION</a></li>
+                        <li onmouseover="$('.community').show();" onmouseleave="$('.community').hide();"><a href="#none">COMMUNITY</a></li>
+                    </ul>
+                    <div class="search">
+                        <form method="" action="">
+                            <div class="box">
+                                <input type="text" class="form_input basic_search" placeholder="검색어를 입력해주세요">
+                                <input type="submit" class="search_btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 헤더 서브메뉴 드롭 -->
+                <div class="menu_sub dropdown bed" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>침대</h2>
+                        <ul class="depth">
+                            <li>
+                                <a href="#none">침대/매트리스</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">침대</a></li>
+                                    <li><a href="#none">매트리스</a></li>
+                                    <li><a href="#none">침구</a></li>
+                                    <li><a href="#none">침대 수납</a></li>
+                                    <li><a href="#none">침대헤드</a></li>
+                                    <li><a href="#none">매트리스 베이스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">옷장</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">맞춤형 옷장</a></li>
+                                    <li><a href="#none">독립형 옷장</a></li>
+                                    <li><a href="#none">여닫이 옷장</a></li>
+                                    <li><a href="#none">미닫이 옷장</a></li>
+                                    <li><a href="#none">오픈형 옷장</a></li>
+                                    <li><a href="#none">현관 옷장</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">서랍장</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">2단 서랍장</a></li>
+                                    <li><a href="#none">3단 서랍장</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">침대협탁</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">오픈형 협탁</a></li>
+                                    <li><a href="#none">서랍형 협탁</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">침구</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">침구 커버/시트</a></li>
+                                    <li><a href="#none">이불</a></li>
+                                    <li><a href="#none">베개</a></li>
+                                    <li><a href="#none">매트리스 보호패드</a></li>
+                                    <li><a href="#none">침대 스프레드/스로우</a></li>
+                                    <li><a href="#none">침대 헤드보드 커버</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_sub dropdown living" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>거실</h2>
+                        <ul class="depth">
+                            <li>
+                                <a href="#none">소파</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">패브릭 소파</a></li>
+                                    <li><a href="#none">천연/인조가죽 소파</a></li>
+                                    <li><a href="#none">모듈식 소파</a></li>
+                                    <li><a href="#none">소파베드</a></li>
+                                    <li><a href="#none">풋스툴/발받침대</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">암체어</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">암체어</a></li>
+                                    <li><a href="#none">긴의자/카우치</a></li>
+                                    <li><a href="#none">풋트출/발받침대</a></li>
+                                    <li><a href="#none">암체어 액세서리/부품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">책장/선반유닛</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">큐브형 수납</a></li>
+                                    <li><a href="#none">선반유닛</a></li>
+                                    <li><a href="#none">책장</a></li>
+                                    <li><a href="#none">수납선반/유닛</a></li>
+                                    <li><a href="#none">주방 팬트리</a></li>
+                                    <li><a href="#none">벽선반</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">수납장/장식장</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">거실수납시스템</a></li>
+                                    <li><a href="#none">거실장/찬장</a></li>
+                                    <li><a href="#none">장식장</a></li>
+                                    <li><a href="#none">수납장</a></li>
+                                    <li><a href="#none">수납유닛/수납장</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">커피테이블/보조테이블</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">보조테이블</a></li>
+                                    <li><a href="#none">커피테이블</a></li>
+                                    <li><a href="#none">콘솔테이블</a></li>
+                                    <li><a href="#none">네스팅테이블</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_sub dropdown kitchen" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>주방</h2>
+                        <ul class="depth">
+                            <li>
+                                <a href="#none">주방 시스템</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">METOD 메토드 주방</a></li>
+                                    <li><a href="#none">ENHEY 엔헤트 주방</a></li>
+                                    <li><a href="#none">KNOXHULT 크녹스홀트 주방</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">주방 조리대</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">프리컷 조리대</a></li>
+                                    <li><a href="#none">조리대 용품</a></li>
+                                    <li><a href="#none">주방 카트/아일랜드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">식탁</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">원형 테이블</a></li>
+                                    <li><a href="#none">확장형 테이블</a></li>
+                                    <li><a href="#none">2인용 식탁</a></li>
+                                    <li><a href="#none">4인용 식탁</a></li>
+                                    <li><a href="#none">6인용 식탁</a></li>
+                                    <li><a href="#none">10인용 식탁</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">조리도구</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">프라인팬/웍</a></li>
+                                    <li><a href="#none">냄비/소스팬</a></li>
+                                    <li><a href="#none">오븐용기</a></li>
+                                    <li><a href="#none">조리용품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">식품보관/정리</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">식품용기</a></li>
+                                    <li><a href="#none">병/캔</a></li>
+                                    <li><a href="#none">양념/조미료 스탠드</a></li>
+                                    <li><a href="#none">와인랙</a></li>
+                                    <li><a href="#none">보냉가방</a></li>
+                                    <li><a href="#none">물병/텀블러</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_sub dropdown bath" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>욕실</h2>
+                        <ul class="depth">
+                            <li>
+                                <a href="#none">욕실 세면대세트</a>
+                                <ul class="depth2">
+                                    <li><a href="#none"></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">욕실수납</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">욕실 키큰장</a></li>
+                                    <li><a href="#none">거울수납장</a></li>
+                                    <li><a href="#none">욕실 벽수납장</a></li>
+                                    <li><a href="#none">세면대 하부장</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">욕실 세면대하부장</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">세면대 세트</a></li>
+                                    <li><a href="#none">세면대</a></li>
+                                    <li><a href="#none">세면대 하부장</a></li>
+                                    <li><a href="#none">세면대 상판</a></li>
+                                    <li><a href="#none">세면대 하부장 다리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">욕실 세면기</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">욕실 세면기</a></li>
+                                    <li><a href="#none">세면대 수전</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">욕실 샤워기/수전</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">샤워세트/레일</a></li>
+                                    <li><a href="#none">샤워헤드</a></li>
+                                    <li><a href="#none">샤워믹서</a></li>
+                                    <li><a href="#none">샤워커튼</a></li>
+                                    <li><a href="#none">세면대 수전</a></li>
+                                    <li><a href="#none">샤워용품수납</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_sub dropdown kids" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>어린이 IKEA</h2>
+                        <ul class="depth">
+                            <li>
+                                <a href="#none">영유아 침대/매트리스</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">영유아 침대</a></li>
+                                    <li><a href="#none">영유아 매트리스</a></li>
+                                    <li><a href="#none">영유아 캐노피</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">영유아 텍스타일</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">영유아 침구</a></li>
+                                    <li><a href="#none">아기수건</a></li>
+                                    <li><a href="#none">아기러그</a></li>
+                                    <li><a href="#none">영유아 이불/베개</a></li>
+                                    <li><a href="#none">영유아 쿠션/담요</a></li>
+                                    <li><a href="#none">아기커튼</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">어린이 수납/정리</a>
+                                <ul class="depth2">
+                                    <li><a href="#none">SMASTAD 시스템</a></li>
+                                    <li><a href="#none">장난감 수납</a></li>
+                                    <li><a href="#none">어린이 옷장</a></li>
+                                    <li><a href="#none">어린이 서랍장</a></li>
+                                    <li><a href="#none">어린이 수납함/바구니</a></li>
+                                    <li><a href="#none">어린이 의류/신발 수납</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">영유아 조명</a>
+                                <ul class="depth2">
+                                    <li><a href="#none"></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">어린이 식기</a>
+                                <ul class="depth2">
+                                    <li><a href="#none"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_sub community" onmouseover="$(this).show();" onmouseleave="$(this).hide();">
+                    <div class="wrap_inner">
+                        <h2>COMMUNITY</h2>
+                        <ul class="depth">
+                            <li><a href="#none">공지사항</a></li>
+                            <li><a href="#none">자주묻는질문</a></li>
+                            <li><a href="#none">상품문의</a></li>
+                            <li><a href="#none">상품리뷰</a></li>
+                            <li><a href="#none">이벤트</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ########### 중앙 시작 ###########-->
+        <div id="main">
+            <!----- 메인 비주얼 슬라이드 ----->
+            <section class="slider visual-fade">
+                <a href="#none"><img src="../images/ikea/slide_01.jpg"></a>
+                <a href="#none"><img src="../images/ikea/slide_02.jpg"></a>
+                <a href="#none"><img src="../images/ikea/slide_03.jpg"></a>
+            </section>
+            <!----- [섹션1] best_item ----->
+            <section class="best_item">
+                <div class="wrap_inner">
+                    <h2 class="subtitle">BEST ITEM</h2>
+                    <a href="#none" class="more">MORE</a>
+                    <ul class="prd_basic">
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <div class="prdimg"><a href="#none"><img src="../images/ikea/best-item01.jpg"></a></div>
+                                </div>
+                                <div class="info">
+                                    <p class="name"><a href="#none">OSKARSHAMN 오스카르스함</a></p>
+                                    <div class="summary">윙체어, 토네루드 레드</div>
+                                    <div class="price">
+                                        <span class="consumer"><del>379,000원</del></span>
+                                        <span class="discount"><strong>300,000원</strong></span>
+                                        <span class="cart"><a href="#none"></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <div class="prdimg"><a href="#none"><img src="../images/ikea/best-item02.jpg"></a></div>
+                                </div>
+                                <div class="info">
+                                    <p class="name"><a href="#none">RISBYN 리스뷘</a></p>
+                                    <div class="summary">펜던트전등갓, 양파 모양/화이트, 57cm</div>
+                                    <div class="price">
+                                        <span class="consumer"><del>29,900원</del></span>
+                                        <span class="discount"><strong>24,000원</strong></span>
+                                        <span class="cart"><a href="#none"></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <div class="prdimg"><a href="#none"><img src="../images/ikea/best-item03.jpg"></a></div>
+                                </div>
+                                <div class="info">
+                                    <p class="name"><a href="#none">VADHOLMA 바드홀마</a></p>
+                                    <div class="summary">키친아일랜드, 블랙/참나무, 126x79x90cm</div>
+                                    <div class="price">
+                                        <span class="consumer"><del>749,000원</del></span>
+                                        <span class="discount"><strong>655,000원</strong></span>
+                                        <span class="cart"><a href="#none"></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <div class="prdimg"><a href="#none"><img src="../images/ikea/best-item04.jpg"></a></div>
+                                </div>
+                                <div class="info">
+                                    <p class="name"><a href="#none">GRONLID 그뢴</a>리드</p>
+                                    <div class="summary">4인용소파+긴 의자, 융엔 미디엄그레이</div>
+                                    <div class="price">
+                                        <span class="consumer"><del>1,399,000원</del></span>
+                                        <span class="discount"><strong>990,000원</strong></span>
+                                        <span class="cart"><a href="#none"></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!----- [섹션2] md_pick ----->
+            <section class="md_pick">
+                <div class="wrap_inner">
+                    <div class="prd_basic tab_pick">
+                        <h2 class="subtitle">MD PICK</h2>
+                        <ul class="md_tab">
+                            <li data-alt="md_tab1" class="active"><strong>01 </strong> 특별한 분위기 모던 스타일</li>
+                            <li data-alt="md_tab2"><strong>02 </strong> 스타일리시하고 스마트한 스타일</li>
+                            <li data-alt="md_tab3"><strong>03 </strong> 꿈꾸는 듯한 보헤미안 스타일</li>
+                        </ul>
+                    </div>
+                    <div class="md_item">
+                        <ul class="prd_basic cnt_md active" id="md_tab1">
+                            <li><a href="#none"><img src="../images/ikea/md-pick01.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick02.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick03.jpg"></a></li>
+                        </ul>
+                        <ul class="prd_basic cnt_md" id="md_tab2">
+                            <li><a href="#none"><img src="../images/ikea/md-pick04.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick05.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick06.jpg"></a></li>
+                        </ul>
+                        <ul class="prd_basic cnt_md" id="md_tab3">
+                            <li><a href="#none"><img src="../images/ikea/md-pick07.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick08.jpg"></a></li>
+                            <li><a href="#none"><img src="../images/ikea/md-pick09.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!----- [섹션3] new ----->
+            <section class="new">
+                <div class="wrap_inner">
+                    <h2 class="subtitle">NEW</h2>
+                    <div class="new_banner">
+                        <img src="../images/ikea/new-banner.jpg">
+                        <div class="info">
+                            <p class="info_top">
+                                원하는 분위기의 거실을 선택해 보세요.<br>
+                                캔디 색상과 아늑한 코너
+                            </p>
+                            <p class="info_bottom">
+                                <strong>거실을 멋진 분위기로</strong><br>
+                                더 편하고 나은 삶을 만드는 IKEA
+                            </p>
+                            <a href="#none" class="more">more</a>
+                        </div>
+                    </div>
+                    <div class="new_item">
+                        <div class="wrap_inner">
+                            <ul class="prd_basic">
+                                <li>
+                                    <div class="box out">
+                                        <div class="img">
+                                            <div class="prdimg">
+                                                <a href="#none">
+                                                    <img src="../images/ikea/new01.jpg">
+                                                    <img src="../images/ikea/new01-2.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p class="name"><a href="#none"></a>HAVBERG 하브베리</p>
+                                            <div class="summary">암체어+풋스툴, 그란/봄스타드 골드브라운</div>
+                                            <div class="price">
+                                                <span class="consumer">778,000원</span>
+                                                <span class="cart"><a href="#none"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box out">
+                                        <div class="img">
+                                            <div class="prdimg">
+                                                <a href="#none">
+                                                    <img src="../images/ikea/new02.jpg">
+                                                    <img src="../images/ikea/new02-2.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p class="name"><a href="#none"></a>LAUTERS 라우테르스</p>
+                                            <div class="summary">플로어스탠드, 물푸레나무/화이트</div>
+                                            <div class="price">
+                                                <span class="consumer">90,000원</span>
+                                                <span class="cart"><a href="#none"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box out">
+                                        <div class="img">
+                                            <div class="prdimg">
+                                                <a href="#none">
+                                                    <img src="../images/ikea/new03.jpg">
+                                                    <img src="../images/ikea/new03-2.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p class="name"><a href="#none"></a>HEMNES 헴네스</p>
+                                            <div class="summary">8칸서랍장, 화이트 스테인, 160x96cm</div>
+                                            <div class="price">
+                                                <span class="consumer">459,000원</span>
+                                                <span class="cart"><a href="#none"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box out">
+                                        <div class="img">
+                                            <div class="prdimg">
+                                                <a href="#none">
+                                                    <img src="../images/ikea/new04.jpg">
+                                                    <img src="../images/ikea/new04-2.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <p class="name"><a href="#none"></a>STOCKHOLM 스톡홀름</p>
+                                            <div class="summary">그릇, 골드, 20cm</div>
+                                            <div class="price">
+                                                <span class="consumer">19,900원</span>
+                                                <span class="cart"><a href="#none"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!----- [섹션4] mid_banner ----->
+            <section class="mid_banner">
+                <div class="wrap_inner">
+                    <div class="mid_box">
+                        <div class="info">
+                            <a href="#none"><img src="../images/ikea/mid-banner01.jpg"></a>
+                            <strong>새로운 침실에서 단잠에 빠져드세요</strong>
+                            <p>
+                                GLESSTARR 침구의 정교한 플로럴 패턴과 테두리 장식이
+                                편안한 수면에 도움을 줄 거에요
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mid_box">
+                        <div class="info">
+                            <a href="#none"><img src="../images/ikea/mid-banner02.jpg"></a>
+                            <strong>꿈에 그리던 홈오피스를 만나보세요</strong>
+                            <p>
+                                집에서 일하고 공부하기 위한 공간을 찾고
+                                인체공학을 올바로 활용해보세요
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!----- [섹션5] deco ----->
+            <section class="deco">
+                <div class="wrap_inner">
+                    <h2 class="subtitle">이케아로 꾸민 우리집</h2>
+                </div>
+                <ul class="deco_insta">
+                    <li><a href="#none"><img src="../images/ikea/deco01.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco02.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco03.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco04.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco05.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco06.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco07.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco08.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco09.jpg" alt=""></a></li>
+                    <li><a href="#none"><img src="../images/ikea/deco10.jpg" alt=""></a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- ########### 하단 시작 ###########-->
+        <!-- 푸터 -->
+        <footer id="footer">
+            <div class="wrap_inner">
+                <div class="connect_info">
+                    <div class="open">
+                        <h3>운영시간</h3>
+                        <span>
+                            <strong>10:00AM ~ 09:00PM</strong><br>
+                            매월 2째주, 4째주 일요일 휴무
+                        </span>
+                    </div>
+                    <div class="cs">
+                        <p><a href="tel:0000-0000">고객지원 센터 : 1670-4532</a></p>
+                        <p><a href="mailto:ikea@gmail.com">ikea@gmail.com</a></p>
+                    </div>
+                    <ul class="sns">
+                        <li><a href="#none" traget="_blank"><img src="../images/ikea/icon_facebook.png"></a></li>
+                        <li><a href="#none" traget="_blank"><img src="../images/ikea/icon_insta.png"></a></li>
+                        <li><a href="#none" traget="_blank"><img src="../images/ikea/icon_youtube.png"></a></li>
+                        <li><a href="#none" traget="_blank"><img src="../images/ikea/icon_kakao.png"></a></li>
+                    </ul>
+                </div>
+                <div class="shop_info">
+                    <p>IKEA 코리아</p>
+                    <p>주소 : (우)14352 경기도 광명시 일직로 17 IKEA광명점</p>
+                    <p>대표자 : 이사벨 푸치 팔렘</p>
+                    <p>사업자 등록번호 : 106-86-82871</p> 
+                    <p><a href="#none">사업자정보확인</a></p>
+                    <p>통신판매업 신고 : 2018-경기광명-0209</p>
+                    <div class="policy">
+                        <ul>
+                            <li><a href="#none">개인정보처리방침</a></li>
+                            <li><a href="#none">쿠키 정책</a></li>
+                            <li><a href="#none">쿠키 설정</a></li>
+                            <li><a href="#none">웹사이트 이용약관</a></li>
+                            <li><a href="#none">Responsible disclosure</a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright">© Inter IKEA Systems B.V 1999-2024</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSOPHIE</title>
+    <!-- jQuery -->
+    <script src="./script/jquery/jquery-3.7.1.min.js"></script>
+    <!-- Swiper slider -->
+    <script src="./script/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper/swiper.css">
+    <!-- Xeicon -->
+    <link rel="stylesheet" href="./etc/XEIcon-2.2.0/xeicon.min.css">
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/ssophie/favicon.ico">
+    <script src="./custom.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- ########### 상단 시작 ###########-->
+        <!----- 헤더 ----->
+        <header>
+            <div class="wrap_inner">
+                <div class="logo">
+                    <h1><a href="#" class="logo_inner">SSOPHIE</a></h1>
+                </div>
+                <div class="gnb_inner cfixed">
+                    <ul class="gnb left ">
+                        <li class="category">
+                            <a href="#none" onclick="toggle_nav('lnb', this); return false;">카테고리</a>
+                        </li>
+                        <li class="pc"><a href="#about">About Me</a></li>
+                        <li class="pc"><a href="#doit">I can Do it!</a></li>
+                    </ul>
+                    <ul class="gnb right">
+                        <li class="popol">
+                            <a href="#none">Portpolio</a>
+                            <ul class="depth">
+                                <li class="pc"><a href="#responsive1">Responsive Web1</a></li>
+                                <li class="pc"><a href="#responsive2">Responsive Web2</a></li>
+                                <li class="pc"><a href="#responsive3">Responsive Web3</a></li>
+                                <li class="pc"><a href="#pcmo">PC Web</a></li>
+                            </ul>
+                        </li>
+                        <li class="mypage"><a href="#none">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 내비게이션 메뉴 -->
+            <nav class="lnb">
+                <div class="wrap_inner2">
+                    <div class="box_search" id="box_search">
+                        <form method="get">
+                            <div class="box">
+                                <input type="search" name="search_str" value class="basic_search" autocorrect="auto" autocomplete="off" autocapitalize="off" placeholder="검색어를 입력해주세요">
+                                <input type="image" class="btn" src="images/ssophie/icon_search.png" alt="검색">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="cate_list drop wrap_inner2">
+                        <li class="cate">
+                            <a href="#none" class="first">About Me</a>
+                            <ul class="second">
+                                <li>
+                                    <p>
+                                        - 인적사항, 학력사항, 경력사항, 교육경험<br>
+                                        - 성격 및 가치관
+                                    </p>
+                                    <a href="#about" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#none" class="first">I can Do it!</a>
+                            <ul class="second">
+                                <li>
+                                    <p>웹퍼블리셔로써 갖추어야 할 능력</p>
+                                    <a href="#doit" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#none" class="first">Responsive Web1</a>
+                            <ul class="second">
+                                <li>
+                                    <p>게임 회사 '플레이스테이션' 반응형 웹 사이트</p>
+                                    <a href="#responsive1" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cate">          
+                            <a href="#none" class="first">Responsive Web2</a>
+                            <ul class="second">
+                                <li>
+                                    <p>
+                                        온라인숍과 비프레스토랑을 함께 운영하는 기업 '본앤브레드' 반응형 웹 사이트
+                                    </p>
+                                    <a href="#responsive2" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#move" class="first">Responsive Web3</a>
+                            <ul class="second">
+                                <li>
+                                    <p>
+                                        입생로랑뷰티 분야 중 향수 라인 '입생로랑 퍼퓸' 반응형 웹사이트
+                                    </p>
+                                    <a href="#responsive3" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>   
+                        <li class="cate">
+                            <a href="#none" class="first">PC Web</a>
+                            <ul class="second">
+                                <li>
+                                    <p>가구 브랜드 '이케아' PC형 웹 사이트</p>
+                                    <a href="#pcmo" class="shortcut">move</a>
+                                </li>
+                            </ul>
+                        </li>                      
+                    </ul>
+                    <div class="login">
+                        <a href="#none" class="join">Join</a>
+                        <a href="#none" class="log">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- ########### 중앙(콘텐츠) 시작 ###########-->
+        <section id="content">
+            <div id="main">
+                <!-- 메인 비주얼 슬라이드 -->
+                <section class="main_visual">
+                    <div class="swiper-container swiper_main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_01.jpg"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_02.jpg"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_03.jpg"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_04.jpg"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_05.jpg"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#none"><img src="images/ssophie/slide_06.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션1] about -->
+                <section class="about" id="about">
+                    <div class="wrap_inner2">
+                        <h2 class="title">About Me</h2>
+                        <h3>
+                            늦었다고 생각할 때 가장 빠른 때이다!<br>
+                            웹퍼블리셔가 되기위해 새롭게 도전하다!<br>
+                            <span>성장을 원하는 사람,</span> 소인혜입니다.
+                        </h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                        <td>인적사항</td>
+                                        <td>
+                                            소인혜 (91.12.10)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>학력사항</td>
+                                        <td>동국대학교(분교) 사범대학 가정교육과 졸업</td>
+                                    </tr>
+                                    <tr>
+                                        <td>경력사항</td>
+                                        <td>총 2년, 교육회사 교육운영(행정) 및 마케팅</td>
+                                    </tr>
+                                    <tr>
+                                        <td>교육경험</td>
+                                        <td>
+                                            - 온라인강의 코딩웍스 웹퍼블리셔 과정 수료
+                                            <p>(교육기간 : 23.09.01 ~ 23.12.31)</p>
+                                            - 온라인강의 코드잇 웹퍼블리셔 과정 수료
+                                            <p>(교육기간 : 23.10.01 ~ 23.11.30)</p>
+                                            - 온라인강의 코딩애플 HTML+CSS, js 과정 수료
+                                            <p>(교육기간 : 24.01.01 ~ 04.02.11)</p>
+                                            - SBS아카데미컴퓨터아트학원 웹디자인과정 수료
+                                            <p>(교육기간 : 23.09.01 ~ 24.02.29)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>독학</td>
+                                        <td>
+                                            - 온라인강의 및 관련 도서 기반 이론 및 예제 실습</p>
+                                            - 온라인강의 및 관련 도서 기반 심화 예제 실습<br>                                        
+                                            - 기존의 웹 사이트를 보면서 직접 제작하는 실습
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="symbol">
+                                <ul>
+                                    <h3>성격</h3>
+                                    <li><p>차분함</p></li>
+                                    <li><p>꼼꼼함</p></li>
+                                    <li><p>협력심</p></li>
+                                    <li><p>긍정적</p></li>
+                                </ul>
+                                <ul>
+                                    <h3>가치관</h3>
+                                    <li><p>배움</p></li>
+                                    <li><p>자기<br>개발</p></li>
+                                    <li><p>성장</p></li>
+                                    <li><p>소소한<br>즐거움</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="outro">
+                            산을 올라갔다 내려갔다가를 반복하다보면<br class="mobile">
+                            어느 순간 정상에 도달하게 됩니다.<br>
+                            삶도 비슷한 것 같습니다.<br>
+                            웹퍼블리싱 공부를 하면서도<br class="mobile">
+                            즐겁게 임한 시간과 힘든 시간을 있었지만<br>
+                            다시 한 번 꿈을 위해 도전할 수 있다는 것과<br>
+                            명확한 목표가 있었기에 계속 올라갈 수 있었습니다.<br>
+                            웹퍼블리셔로 정상에 도달하는 것이<br>
+                            저의 새로운 목표입니다!
+                        </div>
+                    </div>
+                </section>
+                <article>
+                    <div class="mountain">
+                        <div class="wrap_inner2">
+                            <div class="sky">			
+                                <img class="sun" src="images/ssophie/sun.png">
+                                <img class="cloud1" src="images/ssophie/cloud1.png">
+                                <img class="cloud2" src="images/ssophie/cloud2.png">
+                            </div>	
+                            
+                            <div class="town">
+                                <img class="night" src="images/ssophie/mountain_night.png">
+                                <img class="day" src="images/ssophie/mountain_day.png">	
+                            </div>
+                            
+                            <div class="people">
+                                <img class="woman" src="images/ssophie/people.png">
+                            </div>	
+                        </div>
+                    </div>
+                </article>
+                <!-- [섹션2] do it! -->
+                <section class="doit" id="doit">
+                    <div class="wrap_inner2">
+                        <h2 class="title">I Can Do It!</h2>
+                        <div class="doit_inner">
+                            <div class="ctf">
+                                <h3>웹퍼블리싱 관련 자격증</h3>
+                                <ul>
+                                    <li>
+                                        <p>2023.12 웹디자인기능사 <span>(한국산업인력공단)</span></p>
+                                    </li>
+                                    <li>
+                                        <p>2023.12 컴퓨터그래픽스운용기능사 <span>(한국산업인력공단)</span></p>
+                                    </li>
+                                    <li>
+                                        <img src="images/ssophie/certification01.png">
+                                        <img src="images/ssophie/certification02.png">
+                                    </li>
+                                </ul>
+                                <h3>기타 자격증</h3>
+                                <ul>
+                                    <li><p>2020.11 MS PowerPoint 2016 <span>(Microsoft)</span></p></li>
+                                    <li><p>2020.10 워드프로세서1급 <span>(대한상공회의소)</span></p></li>
+                                    <li><p>2016.02 교원자격증 <span>(교육인적자원부)</span></p></li>
+                                    <li><p>2015.08 한국사능력검정시험 3급 <span>(국사편찬위원회)</span></p></li>
+                                    <li><p>2014.11 MOS 2007 Master <span>(Microsoft)</span></p></li>
+                                    <li><p>2014.10 한국실용글쓰기 3급 <span>(한국국어능력평가협회)</span></p></li>
+                                    <li><p>2014.05 미술심리상담사3급 <span>(한국미술심리치료협회)</span></p></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <h3>SKILL</h3>
+                                <ul>
+                                    <li>
+                                        <i class="xi-html5" style="color: #DD4B25;"></i>
+                                        <P>
+                                            HTML5의 웹 표준과 웹 접근성을 준수하여 마크업을 수행할 수 있으며, 
+                                            웹퍼블리싱을 하기 전에 웹 사이트의 전체적인 기획(폰트 서식, 컬러 가이드, 
+                                            사이즈 정보, 시맨틱 태그 활용, 실용적인 클래스명 지정 등)을 
+                                            꼼꼼하게 하여 체계적인 퍼블리싱 작업을 수행할 수 있습니다.
+                                        </P>
+                                    </li>
+                                    <li>
+                                        <i class="xi-css3" style="color: #146EB0;"></i>
+                                        <P>
+                                            브라우저 환경마다 최적화된 웹 제작의 기본인 크로스 브라우징을 원활히 할 수 있습니다. 
+                                            position, float, flex, media query, 폴백 기법을 활용하여 
+                                            PC, 태블릿, 모바일 등 기기마다 최적화시킨 반응형 웹 제작을 수행해 낼 수 있습니다.
+                                        </P>
+                                    </li>
+                                    <li>
+                                        <i class="xi-javascript" style="color: #F0D91D;"></i>
+                                        <P>
+                                            내비게이션, 탭 메뉴, 아코디언 기능 등 반드시 필요한 상호작용을 구현해 낼 수 있습니다. 
+                                            변수를 만들고, 제이쿼리와 자바스크립트를 병행해서 활용합니다.
+                                            특히 내비게이션, 탭 메뉴, 아코디언 기능 등 반드시 필요한 상호작용을 구현해 낼 수 있습니다. 
+                                        </P>
+                                    </li>
+                                    <li>
+                                        <i class="xi-photoshop" style="color:#2FA3F7;"></i>
+                                        <i class="xi-illustrator" style="color:#F79500;"></i>
+                                        <P>
+                                            포토샵을 활용하여 웹 UI 디자인의 기초 작업을 할 수 있습니다. 
+                                            포토샵과 일러스트의 기본적인 툴을 다루고, 이미지 편집 등
+                                            간단한 아이콘을 제작할 수 있습니다.
+                                        </P>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션3] 인트로 -->
+                <section class="intro" >
+                    <div class="wrap_inner2">
+                        <h2 class="title">Web Publishing<br> Portpolio</h2> 
+                        <h3 class="sub_title">SSOPHIE의 포트폴리오</h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                    <tr>
+                                        <td>제작참여<br>(100%)</td>
+                                        <td>
+                                            기획, 이미지 편집, 아이콘 제작, 웹퍼블리싱<br>
+                                            (제작기간 : 8일)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI 디자인<br>방식</td>
+                                        <td>Photoshop, xeicon, favicon generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>퍼블리싱<br>제작 방식</td>
+                                        <td>HTML, CSS, JS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>레이아웃<br>제작 방식</td>
+                                        <td>position(block, inline-block, fixed,<br class="mobile">
+                                            relative, absolute), float</td>
+                                    </tr>
+                                    <tr>
+                                        <td>플러그인</td>
+                                        <td>swiper slider</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="text2">
+                                포트폴리오 사이트는 PC, 태블릿, 모바일에 최적화된 반응형 웹 사이트로 제작을 했습니다. 상단의 <span>PC 헤더</span>는 스크롤시 로고 크기가 커졌다가 작아지는 디자인이며 고정되는 스타일로 만들었고, <span>태블릿과 모바일 헤더</span>는 내비게이션 버튼을 눌렀을 때 메뉴가 헤더 아래로 나오는 방식입니다. <span>내비게이션 클릭시</span> 여백에 흐림효과를 주면서 여백을 클릭하면 내비게이션이 닫히도록 하여 모바일 이용에 더 편리하도록 만들었습니다.</span> <span>슬라이드</span> 부분은 스와이퍼 슬라이더 플러그인을 사용하여 슬라이드 수를 달리해서 기기의 환경에 맞게 자유자재로 보여지도록 제작했습니다. <span>keyframes</span>를 활용하여 about섹션의 움직이는 그림을 만들었습니다. 전체적으로 <span>버튼</span>을 클릭하는 부분은 hover를 활용하여 변화 효과를 주었습니다.
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc">
+                                    <p class="device">PC</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/ssophie_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/ssophie_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/ssophie_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션4] 반응형웹1 -->
+                <section class="popol res1" id="responsive1">
+                    <div class="wrap_inner2">
+                        <h2 class="title2">01 Responsive Web</h2>
+                        <p class="sub">Web Publishing</p>
+                        <h3 class="sub_title">
+                            게임 회사<br class="mobile">
+                            '플레이스테이션' 반응형 웹 사이트
+                        </h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                        <td>제작참여<br>(100%)</td>
+                                        <td>
+                                            기획, 이미지 편집, 아이콘 제작, 웹퍼블리싱<br>
+                                            (제작기간 : 13일)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI 디자인<br>방식</td>
+                                        <td>Photoshop, xeicon, favicon generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>퍼블리싱<br>제작 방식</td>
+                                        <td>HTML, CSS, JS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>레이아웃<br>제작 방식</td>
+                                        <td>position(block, inline-block, fixed,<br class="mobile">
+                                            relative, absolute), float</td>
+                                    </tr>
+                                    <tr>
+                                        <td>플러그인</td>
+                                        <td>swiper slider, image-maps</td>
+                                    </tr>
+                                </table>
+                                <div class="btn_view">
+                                    <a class="view" href="html/playstation_move.html" target="_blank">사이트 바로가기</a>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                이 사이트는 PC, 태블릿, 모바일에 최적화된 반응형 웹 사이트로 제작을 했습니다. 상단의 <span>PC 헤더</span>는 스크롤시 디자인이 변경되어 고정되는 스타일로 만들었고, <span>태블릿과 모바일 헤더</span>는 내비게이션 버튼을 눌렀을 때 왼쪽에서 메뉴가 헤더 아래로 나오는 방식이며, 검색창이 열려있는 상태에서 내비게이션 버튼을 클릭했을 때 검색창이 사라지도록 했습니다. <span>내비게이션 클릭시</span> 여백에 흐림효과를 주면서 여백을 클릭하면 내비게이션이 닫히도록 하여 모바일 이용에 더 편리하도록 만들었습니다.</span> <span>슬라이드</span> 부분은 스와이퍼 슬라이더 플러그인을 사용하여 슬라이드 수를 달리해서 기기의 환경에 맞게 자유자재로 보여지도록 제작했습니다. <span>keyframes</span>를 활용하여 버튼을 클릭했을 때의 회전 애니메이션 효과, 게임기 패드가 움직이는 느낌의 애니메이션 효과, 움직이는 텍스트 배너를 만들었습니다. 2024년 최고의 기대 작품 섹션은 <span>이미지맵</span>으로 각 영역마다 링크를 설정하여 바로 이동가능하도록 만들었습니다. 하단의 <span>자주묻는질문</span>섹션과 <span>푸터</span>의 정보는 아코디언 방식을 적용하였습니다. 전체적으로 <span>버튼</span>을 클릭하는 부분은 hover를 활용하여 변화 효과를 주었습니다.
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc">
+                                    <p class="device">PC</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/ps_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/ps_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/ps_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션5] 반응형웹2 -->
+                <section class="popol res2" id="responsive2">
+                    <div class="wrap_inner2">
+                        <h2 class="title2">02 Responsive Web </h2>
+                        <p class="sub">Web Publishing</p>
+                        <h3 class="sub_title">
+                            온라인숍과 비프레스토랑을 함께 운영하는 기업<br class="mobile">
+                            '본앤브레드'의 반응형 웹 사이트
+                        </h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                        <td>제작참여<br>(100%)</td>
+                                        <td>
+                                            기획, 이미지 편집, 아이콘 제작, 웹퍼블리싱<br>
+                                            (제작기간 : 10일)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI 디자인<br>방식</td>
+                                        <td>Photoshop, favicon generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>퍼블리싱<br>제작 방식</td>
+                                        <td>HTML, CSS, JS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>레이아웃<br>제작 방식</td>
+                                        <td>position(block, inline-block, fixed,<br class="mobile">
+                                            relative, absolute), float</td>
+                                    </tr>
+                                    <tr>
+                                        <td>플러그인</td>
+                                        <td>swiper slider, kakaomap wep API</td>
+                                    </tr>
+                                </table>
+                                <div class="btn_view">
+                                    <a class="view" href="html/born-bred_move.html" target="_blank">사이트 바로가기</a>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                이 사이트는 PC, 태블릿, 모바일에 최적화된 반응형 웹 사이트로 제작을 했습니다. 상단의 <span>PC 헤더</span>는 최상단에 배너광고를 넣어 스크롤시 사라지고 헤더는 고정되는 스타일이며, 서브메뉴는 각 카테고리마다 개별로 드롭되는 형태입니다. <span>태블릿과 모바일 헤더</span>는 내비게이션 버튼을 눌렀을 때 왼쪽에서 메뉴가 나오며, y축으로 화면을 가리는 형태입니다. <span>내비게이션 클릭시</span> 여백에 흐림효과를 주면서 여백을 클릭하면 내비게이션이 닫히도록 하여 모바일 이용에 더 편리하도록 만들었습니다.</span> <span>로그인</span>을 클릭하면 로그인 창이 뜨도록 제작했습니다. <span>슬라이드</span> 부분은 스와이퍼 슬라이더 플러그인을 사용했고, 스와이퍼의 기본 arrow와 dots는 css로 스타일을 변경했습니다. <span>섹션 SHOP </span>부분은 상품의 분류를 잘 보여주어야 사용자의 편리성을 상승시킬 수 있으므로 상세분류하여 탭버튼으로 모든 제품이 보이도록 만들었습니다. 하단의 <span>지도</span>는 카카오 웹 API를 활용하여 지도사진을 첨부하였습니다. 전체적으로 <span>버튼</span>을 클릭하는 부분은 hover를 활용하여 변화 효과를 주었습니다.  
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc">
+                                    <p class="device">PC</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/bb_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/bb_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/bb_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc size">
+                                    <p class="device">PC 회원가입</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/bb_login_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET 회원가입</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/bb_login_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE 회원가입</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/bb_login_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션6] 반응형웹3 -->
+                <section class="popol res3" id="responsive3">
+                    <div class="wrap_inner2">
+                        <h2 class="title2">03 Responsive Web</h2> 
+                        <p class="sub">Web Publishing</p>
+                        <h3 class="sub_title">
+                            입생로랑뷰티 분야 중 향수 라인<br class="mobile">
+                            '입생로랑 퍼퓸'의 반응형 웹사이트
+                        </h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                        <td>제작참여<br>(100%)</td>
+                                        <td>
+                                            기획, 이미지 편집, 아이콘 제작, 웹퍼블리싱<br>
+                                            (제작기간 : 12일)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI 디자인<br>방식</td>
+                                        <td>Photoshop, xeicon, favicon generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>퍼블리싱<br>제작 방식</td>
+                                        <td>HTML, CSS, JS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>레이아웃<br>제작 방식</td>
+                                        <td>position(block, inline-block,<br class="mobile">
+                                            fixed, relative, absolute), flex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>플러그인</td>
+                                        <td>swiper slider, AOS animation</td>
+                                    </tr>
+                                </table>
+                                <div class="btn_view">
+                                    <a class="view" href="html/ysl_move.html" target="_blank">사이트 바로가기</a>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                이 사이트는 PC, 태블릿, 모바일에 최적화된 반응형 웹 사이트로 제작을 했습니다. 상단의 <span>PC 헤더</span>는 스크롤시 디자인이 변경되어 고정되는 스타일이며, 서브메뉴는 각 카테고리마다 개별로 드롭되는과 동시에 x축으로 100% 배경이 있는 스타일입니다. <span>태블릿과 모바일 헤더</span>는 내비게이션 버튼을 클릭했을 때 전체 화면에 메뉴가 보이는 형태입니다. <span>내비게이션 메뉴</span>에는 이미지 썸네일이나 gif파일을 넣어 광고할 수 있도록 만들었습니다.</span> <span>메인 상단 이미지</span> 부분은 고정이미지를 사용하여 전광판 광고 느낌을 주었습니다. <span>회원가입</span>을 클릭하면 회원가입 창이 뜨도록 제작했습니다. <span>상품 섹션</span>은 스와이퍼 슬라이드를 사용하여 상품을 시각적으로 잘 보여주는 효과를 주었습니다. <span>이미지 광고</span>부분은 AOS 애니메이션을 사용하여 시각적으로 기억에 남을 수 있도록 하였습니다. <span>keyframes</span>를 활용하여 바다가 배경인 이미지가 움직이는 느낌을 주었습니다. <span>상품나열 </span>부분은 hover했을 때 좋아요 아이콘과 장바구니 아이콘이 보이도록 했으며, 전체적으로 <span>버튼</span>을 클릭하는 부분도 hover를 활용하여 변화 효과를 주었습니다. 
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc">
+                                    <p class="device">PC</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/ysl_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/ysl_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/ysl_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc size">
+                                    <p class="device">PC 회원가입</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/ysl_join_pc.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev ta">
+                                    <p class="device">TABLET 회원가입</p>
+                                    <div class="thum ta">
+                                        <div class="photo"><img src="images/ssophie/ysl_join_ta.png"></div>
+                                    </div>
+                                </li>
+                                <li class="prev mo">
+                                    <p class="device">MOBILE 회원가입</p>
+                                    <div class="thum mo">
+                                        <div class="photo"><img src="images/ssophie/ysl_join_mo.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </section>
+                <!-- [섹션7] PC&MO -->
+                <section class="popol pcmo" id="pcmo">
+                    <div class="wrap_inner2">
+                        <h2 class="title2">04 PC Web</h2>
+                        <p class="sub">Web Publishing</p>
+                        <h3 class="sub_title">
+                            가구 브랜드<br class="mobile">
+                            '이케아'의 PC형 웹 사이트
+                        </h3>
+                        <div class="desc_inner">
+                            <div class="desc">
+                                <table class="text">
+                                    <tr>
+                                        <td>제작참여<br>(100%)</td>
+                                        <td>
+                                            기획, 이미지 편집, 아이콘 제작, 웹퍼블리싱<br>
+                                            (제작기간 : 5일)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI 디자인<br>방식</td>
+                                        <td>Photoshop, favicon generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>퍼블리싱<br>제작 방식</td>
+                                        <td>HTML, CSS, JS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>레이아웃<br> 제작 방식</td>
+                                        <td>position(block, inline-block,<br class="mobile">
+                                            fixed, relative, absolute), flex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>플러그인</td>
+                                        <td>swiper slider</td>
+                                    </tr>
+                                </table>
+                                <div class="btn_view">
+                                    <a class="view" href="html/ikea.html" target="_blank">사이트 바로가기</a>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                이 사이트는 PC에 최적화한 웹 사이트로 제작했습니다. 상단의 <span>헤더</span>는 2단으로 구성하였으며, 스크롤시 한 단의 헤더만 디자인이 변경되어 고정되는 스타일입니다. 이케아 브랜드 색으로 스타일을 주어 사용자에게 각인 효과를 유도하였습니다. 가구의 경우 공간 및 용도에 따라 분류가 세분화되어 있기 때문에 <span>서브메뉴</span>에 각 카테고리마다 개별로 드롭되는과 동시에 x축으로 100% 배경이 있는 스타일로 하여 하위메뉴들을 전체적으로 볼 수 있도록 만들었습니다. <span>슬라이드 이미지</span> 부분은 슬릭 슬라이더를 활용하였습니다. <span>공간 이미지</span>의 경우에는 줌인을 하여 크게 볼 수 있도록 하였고, <span>상품 이미지</span>의 경우는 다른 이미지를 한 장 더 볼 수 있도록 이미지 호버시 2번째 이미지가 보이도록 만들었습니다.
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <ul class="prev_inner">
+                                <li class="prev pc">
+                                    <p class="device">PC</p>
+                                    <div class="thum pc">
+                                        <div class="photo"><img src="images/ssophie/ikea_pc.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </section>
+            </div>
+        </section>
+        <!-- ########### 하단 시작 ########### -->
+        <!-- 푸터 -->
+        <footer>
+            <div>
+                <div class="logo"><a href="#">SSOPHIE</a></div>
+            </div>
+        </footer>
+        <!-- go to top 버튼 -->
+        <div class="btn_scroll"><a href="#" class="up" onclick="scrollup()" >up</a></div>
+        <!-- 내비게이션 클릭시 배경 흐리게 -->
+        <div id="dimmed"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,992 @@
+@charset "utf-8";
+
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/* font-family: 'Lilita One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+*, *:before, *:after {box-sizing:border-box;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; line-height: 1.6;}
+body {min-width: 320px; color: #000; font-family: 'Noto Sans KR', serif;    background-color: #F5EEE6; word-break: break-all; -webkit-text-size-adjust: none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
+ul, li{list-style: none;}
+a{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; color: #000; text-decoration: none; vertical-align: baseline; cursor: pointer;}
+img{vertical-align: top;}
+hr{display: block; margin: 0; padding: 0; border: 0;}
+table{border-collapse: collapse; border-spacing: 0;}
+input{margin: 0; padding: 0; border-radius: 0; outline: none; vertical-align: top; -webkit-appearance: none; appearance: none;}
+.cfixed:after{content: ''; display: block; clear:both;}
+.dvider{width: 95%; height: 1px; margin: 0 auto; margin-top: 80px; margin-bottom: 30px; background:#bbb;}
+
+/* ########## 모바일용 CSS ########## */
+/* [공통] */
+body.view_nav{
+    overflow: hidden;
+}
+body.view_nav #dimmed{
+    display: block;
+}
+#dimmed{
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.btn_scroll{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 32px;
+}
+.btn_scroll a{
+    display: block;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px auto;
+    font-size: 0;
+    text-align: center;
+}
+.btn_scroll a.up{
+    background-image: url(images/ssophie/btn_scroll.png);
+}
+#wrapper{
+    position: relative;
+}
+.wrap_inner{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.wrap_inner2{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4%;
+}
+.title{
+    margin-bottom: 25px;
+    color: #CE5A67;
+    font-family: "Lilita One", sans-serif;
+    font-size: 35px;
+    font-size: 2.188rem;
+    font-weight: normal;
+    text-shadow: 3px 3px 0 #FFB0B0;
+    text-align: center;
+}
+.title2{
+    margin-bottom: 25px;
+    color: #47bbe9;
+    font-family: "Lilita One", sans-serif;
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-weight: normal;
+    text-shadow: 3px 3px 0 #7ff1ec;
+    text-align: left;
+}
+/* 헤더 */
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 70px;
+    background-color: #F5EEE6;
+}
+header .hd_inner{
+    position: relative;
+}
+header .logo h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+}
+header .logo h1 .logo_inner{
+    display: block;
+    color: #FFB0B0;
+    font-size: 45px;
+    font-family: "Lilita One", sans-serif;
+    text-shadow: 5px 5px 0 #CE5A67;
+}
+header .gnb{
+    font-size: 0;
+}
+header .gnb li.pc, header .gnb li.popol{
+    display: none;
+}
+header .gnb.left{
+    float: left;
+}
+header .gnb li a{
+    display: inline-block;
+    width: 72px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    font-size: 0;
+    font-weight: bold;
+    line-height: 70px;
+}
+header .gnb.left li.category a{
+    background-image: url(images/ssophie/icon_category.png);
+    background-size: 36px;
+}
+header .gnb.left li.category a.active{
+    background-image: url(images/ssophie/icon_close.png);
+    background-size: 40px;
+}
+header .gnb.right{
+    float: right;
+}
+header .gnb.right li.mypage a{
+    position: relative;
+    background-image: url(images/ssophie/icon_mypage.png);
+    background-size: 48px;
+}
+header .gnb.right li.mypage a:before{
+    content: 'Good Day!';
+    display: none;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 300;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #FF7F85;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #CE5A67;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+header .gnb.right li.mypage a:after{
+    content:'';
+    display: none;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 300;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #FF7F85;
+    border-top: 1px solid #FF7F85;
+    background-color: #fff;
+}
+header .gnb.right li.mypage a:hover:before,
+header .gnb.right li.mypage a:hover:after{
+    display: block;
+}
+/* 내비게이션 메뉴 */
+nav.lnb{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    padding: 20px;
+    background-color: #F5EEE6;
+    box-shadow: 0 0 10px #FF7F85;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s linear;
+}
+nav.lnb.is_show{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s linear
+}
+nav.lnb .box_search{
+    padding-bottom: 20px;
+}
+nav.lnb .box_search .box{
+    text-align: center;
+}
+nav.lnb .box_search .box .basic_search{
+    width: 60%;
+    padding: 6px 10px;
+    border: 1px solid #E6A4B4;
+    border-radius: 5px;
+    background: #fff;
+    color: #181616;
+}
+nav.lnb .box_search .box .btn{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;  
+}
+nav.lnb .cate_list{
+    border-top: 2px dotted #E6A4B4;
+    border-bottom: 2px dotted #E6A4B4;
+}
+nav.lnb .cate_list li{
+    padding: 5px 0;
+}
+nav.lnb .cate_list li a{
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+nav.lnb .cate_list li a.first:hover{
+    color: #FF7F85;
+}
+nav.lnb .cate_list li a.first.selected{
+    color: #FF7F85;
+    font-weight: bold;
+}
+nav.lnb .cate_list .second{
+    display: none;
+    border: 1px solid #E6A4B4;
+    border-radius: 5px;
+    background: #ffffff70;
+}
+nav.lnb .cate_list .second li{
+    position: relative;
+    padding: 10px;
+}
+nav.lnb .cate_list .second li a,
+nav.lnb .cate_list .second li p{
+    font-size: 13px;
+    font-size: 0.813rem;
+}
+nav.lnb .cate_list .second li a.shortcut{
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    width: 55px;
+    height: 15px;
+    background: url(images/ssophie/icon_shortcut.png) no-repeat right;
+    background-size: 15px;
+    color: #3E3232;
+    line-height: 11px;
+}
+nav.lnb .login{
+    float: right;
+    padding-top: 20px;
+}
+nav.lnb .login a{
+    display: inline-block;
+    margin-right: 15px;
+    padding: 2px 10px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #FF7F85;
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: center;
+}
+nav.lnb .login a:hover{
+    color: #FF7F85;
+    font-weight: bold;
+    background-color: #fff;
+}
+/* 메인 비주얼 슬라이드 */
+#main .main_visual{
+    width: 100%;
+    margin-top: 65px;
+    padding: 4%;
+}
+#main .main_visual .swiper-slide{
+    overflow: hidden;
+}
+#main .main_visual img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+/* [섹션1] about */
+#main .about{
+    width: 100%;
+    overflow: hidden;
+	animation: sky linear 20s infinite;
+}
+#main .about h3{
+    text-align: center;
+}
+#main .about table.text,
+#main .about .symbol{
+    margin-bottom: 20px;
+}
+#main .about table.text p{
+    padding-left: 10px;
+}
+#main .about .symbol ul{
+    margin-bottom: 10px;
+    text-align: center;
+}
+#main .about .symbol ul li{
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: #ffffff6e;
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: center;
+}
+#main .about .symbol ul li p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#main .about .outro{
+    margin-top: 50px;
+    text-align: center;
+}
+/* [article] */
+#main article{
+    width: 100%;
+    overflow: hidden;
+    animation: sky linear 20s infinite;
+}
+#main article .wrap_inner2{
+    position: relative;
+    height: 400px;
+}
+#main article img{
+    width: 100%;
+    height: auto;
+}
+#main .mountain .sky .sun{
+    position: absolute; 
+	bottom: -100px; 
+	left: 50%; 
+	margin-left: -100px; 
+    min-width: 100px;
+    max-width: 120px;
+	animation: sun linear 20s infinite;
+}
+#main .mountain .sky .cloud1{
+    position: absolute; 
+	top: 25%; 
+	left: 40%; 
+    min-width: 50px;
+    max-width: 80px;
+	animation: flow linear 15s infinite;
+}
+#main .mountain .sky .cloud2{
+    position: absolute; 
+    top: 10%;
+	left: 40%; 	
+    min-width: 50px;
+    max-width: 80px;
+    animation: flow linear 20s infinite;
+}
+#main .mountain .town .night{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#main .mountain .town .day{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: day linear 20s infinite;	
+}
+#main .mountain .people .woman{
+	position: absolute;
+	left: 0%;
+	bottom: 0px;
+    min-width: 20px;
+    max-width: 20px;
+	animation: walk linear 20s infinite;
+}
+@keyframes sky {
+	0% {background-color: #b08fcc;}
+	25% {background-color: #b1e1e2;}
+	50% {background-color: #fcd2e2;}
+	75% {background-color: #636888;}
+	100% {background-color: #b08fcc;}
+}
+@keyframes sun {
+	0% {bottom: 0; left: 0; transform: rotate(15deg); opacity: 0;}
+	15% {bottom: 20%; left: 10%; transform: rotate(30deg); opacity: 1;}
+	25% {bottom: 40%; left: 30%; transform: rotate(90deg); opacity: 1;}
+	50% {bottom: 50%; left: 50%; transform: rotate(180deg); opacity: 1;}
+	65% {bottom: 40%; left: 70%; transform: rotate(220deg); opacity: 0.5;}
+	75% {bottom: 20%; left: 90%; transform: rotate(260deg); opacity: 0;}
+	100% {bottom: 0; left: 95%; transform: rotate(300deg); opacity: 0;}
+}
+@keyframes flow {
+	0% {left: 0; opacity: 0;}
+	15% {opacity: 0.5; }
+	25% {opacity: 0.5; }
+	50% {opacity: 0.5; }
+	65% {opacity: 0.5; }
+	75% {opacity: 0.5; }
+	100% {left: 95%; opacity: 0;}
+}
+@keyframes day {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+	50% {opacity: 1;}
+	75% {opacity: 0;}
+	100% {opacity: 0;}
+}
+@keyframes walk {
+	0% {left: 0; opacity: 0;}
+	10% {opacity: 1;}
+	80% {opacity: 1;}
+	100% {left: 90%; opacity: 0;}
+}
+/* [섹션2] i can do it! */
+#main .doit{
+    width: 100%;
+    background-color: #FFF8E3;
+}
+#main .doit img{
+    width: 150px;
+    height: auto;
+}
+#main .doit h3{
+    margin: 10px 0;
+    text-align: center;
+}
+#main .doit .ctf ul,
+#main .doit .skill ul{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff9c;
+    text-align: left;
+}
+#main .doit .ctf ul li p,
+#main .doit .skill ul li p{
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+#main .doit .skill ul li p{
+    text-align: justify;
+}
+#main .doit .ctf ul li p span{
+    letter-spacing: -2px;
+}
+#main .doit .skill i{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+#main .doit .skill i.xi-photoshop,
+#main .doit .skill i.xi-illustrator{
+    position: relative;
+    top: 0;
+    left: 45.5%;
+}
+/* [섹션3] 인트로 */
+#main .intro{
+    width: 100%;
+    background: url(images/ssophie/mountain_01.png) no-repeat center top 70px;
+    background-size: 100%;
+    background-color: #DCF2F1;
+}
+/* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+#main .popol p.sub{
+    color: #dc143c;
+    font-size: 13px;
+    font-size: 0.813rem;
+    font-weight: bold;
+}
+#main .popol h3.sub_title{
+    font-size: 16px;
+    font-size: 1rem;
+}
+#main table{
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+#main table tr, #main table td{
+    padding: 6px;
+    border-top: 1px solid #000;
+}
+#main table tr:last-child{
+    border-bottom: 1px solid #000;
+}
+#main table td:nth-of-type(1){
+    width: 85px;
+    text-align: center;
+}
+#main table td:nth-of-type(2){
+    width: 310px;
+}
+#main .desc_inner .desc .btn_view{
+    margin: 20px 0;
+    text-align: center;
+}
+#main .desc_inner .desc .btn_view a.view{
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: 2px solid #dc143c;
+    background-color: #dc143c;
+    border-radius: 5px;
+}
+#main .desc_inner .desc .btn_view a.view:hover{
+    opacity: 0.6;
+}
+#main .desc_inner .text2{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: justify;
+}
+#main .desc_inner .text2 span{
+    font-weight: bold;
+}
+#main .preview ul.prev_inner{
+    font-size: 0;
+}
+#main .preview ul.prev_inner li.prev{
+    display: inline-block;
+    vertical-align: top;
+}
+#main .preview ul.prev_inner li.prev p.device{
+    margin-top: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#main .preview ul.prev_inner li.prev.pc{
+    width: 100%;
+}
+#main .preview ul.prev_inner li.prev.ta{
+    width: 55%;
+    margin-right: 5%;
+}
+#main .preview ul.prev_inner li.prev.mo{
+    width: 40%;
+}
+#main .preview ul.prev_inner li.prev .thum{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    font-size: 16px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+#main .preview ul.prev_inner li.prev .thum .photo::-webkit-scrollbar{
+    background-color: transparent;
+}
+#main .preview ul.prev_inner li.prev .thum .photo::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+#main .preview ul.prev_inner li.prev .thum .photo::-webkit-scrollbar-track{
+    background-color: #000;
+    box-shadow: inset 0px 0px 4px #fff;
+}
+#main .preview ul.prev_inner li.prev .thum .photo{
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+#main .preview ul.prev_inner li.prev .thum .photo img{
+    width: inherit;
+    object-fit: cover;
+    object-position: top;
+    transition: all 5s linear;
+}
+#main .preview ul.prev_inner li.prev.pc.size .thum,
+#main .preview ul.prev_inner li.prev.pc.size .thum .photo{
+    height: 220px;
+}
+/* [섹션4] 반응형웹1 */
+#main .res1{
+    width: 100%;
+    background-color: #FFE5E5;
+}
+/* [섹션5] 반응형웹2 */
+#main .res2{
+    width: 100%;
+    background-color: #FFF8E3;
+}
+/* [섹션6] 반응형웹3 */
+#main .res3{
+    width: 100%;
+    background-color: #FFE5E5;
+}
+/* [섹션7] PC&MO */
+#main .pcmo{
+    width: 100%;
+    background: url(images/ssophie/mountain_02.png) no-repeat center bottom 70px;
+    background-size: 100%;
+    background-color: #FFF8E3;
+}
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 50px;
+    padding: 0 4%;
+}
+footer .logo{
+    line-height: 50px;
+}
+footer .logo a{
+    display: block;
+    color:  #CE5A67;
+    font-family: "Lilita One", sans-serif;
+    font-size: 25px;
+    font-size: 1.563rem;
+    font-weight: normal;
+    text-shadow: 3px 3px 0 #FFB0B0;
+}
+@media all and (min-width: 550px){
+    /* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+    #main .popol .mobile{
+        display: none;
+    }
+    #main .desc_inner .text2{
+        margin-bottom: 15px;
+    }
+    #main .preview ul.prev_inner li.prev .thum{
+        height: 400px;
+    }
+    #main .preview ul.prev_inner li.prev .thum .photo{
+        height: 400px;
+    }
+    #main .preview ul.prev_inner li.prev.pc.size .thum,
+    #main .preview ul.prev_inner li.prev.pc.size .thum .photo{
+        height: 280px;
+    }
+}
+@media all and (min-width: 670px){
+    /* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+    #main .popol p.sub{
+        font-size: 15px;
+        font-size: 0.938rem;
+    }
+    #main .popol h3.sub_title,
+    #main .preview ul.prev_inner li.prev p.device{
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    #main .desc table,
+    #main .desc .btn_view a.view,
+    #main .desc_inner .text2{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+/* ########## 태블릿용 CSS ########## */
+@media all and (min-width: 768px){
+    header{
+        height: 165px;
+        transition: all 0.35s linear;
+    }
+    header .logo h1{
+        height: inherit;
+    }
+    header .logo h1 .logo_inner{
+        font-size: 95px;
+        transition: all 0.35s linear;
+    }
+    /* 헤더 모션 */
+    header.resize{
+        height: 70px;
+        transition: all 0.35s linear;
+    }
+    header .logo h1 .logo_inner.resize{
+        font-size: 45px;
+        transition: all 0.35s linear;
+    }
+    /* 내비게이션 메뉴 */
+    nav.lnb{
+        top: 160px;
+    }
+    nav.lnb.is_show{
+        top: 165px;
+    }
+    nav.lnb.mobile{
+        display: none;
+    }
+    nav.lnb .box_search .box .basic_search{
+        width: 30%;
+    }
+    nav.lnb .cate_list .second li a,
+    nav.lnb .cate_list .second li p{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    /* 헤더 모션시 내비게이션 위치 변경 */
+    nav.lnb.resize{
+        top: 65px;
+    }
+    nav.lnb.is_show.resize{
+        top: 70px;
+    }
+    /* 메인 비주얼 슬라이드 */
+    #main .main_visual{
+        margin-top: 165px;
+    }
+    /* [섹션2] i can do it! */
+    #main .doit .ctf ul li p,
+    #main .doit .skill ul li p{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    #main .doit .ctf ul li p span{
+        letter-spacing: 0;
+    }
+    #main .doit .skill i{
+        font-size: 55px;
+        font-size: 3.44rem;
+    }
+    /* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+    #main .preview ul.prev_inner li.prev .thum,
+    #main .preview ul.prev_inner li.prev .thum .photo{
+        height: 500px;
+    }
+    #main .preview ul.prev_inner li.prev.pc.size .thum,
+    #main .preview ul.prev_inner li.prev.pc.size .thum .photo{
+        height: 300px;
+    }
+}
+@media all and (min-width: 900px){
+    /* [article] */
+    #main .mountain .sky .sun{
+        min-width: 100px;
+        max-width: 200px;
+    }
+    #main .mountain .sky .cloud1,
+    #main .mountain .sky .cloud2{    
+        min-width: 80px;
+        max-width: 97px;
+    }
+    #main .mountain .people .woman{
+        min-width: 27px;
+        max-width: 39px;
+    }
+    /* [섹션2] i can do it! */
+    #main .doit_inner > div{
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+    #main .doit_inner .ctf{
+        margin-right: 2%;
+    }
+    /* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+    #main .preview ul.prev_inner li.prev .thum{
+        height: 550px;
+    }
+    #main .preview ul.prev_inner li.prev .thum .photo{
+        height: 550px;
+    }
+    #main .preview ul.prev_inner li.prev.pc.size .thum,
+    #main .preview ul.prev_inner li.prev.pc.size .thum .photo{
+        height: 320px;
+    }
+}
+
+/* ########## PC용 CSS ########## */
+@media all and (min-width: 1024px){
+    /* [공통] */
+    .title{
+        font-size: 40px;
+        font-size: 2.5rem;
+    }
+    .title2{
+        font-size: 35px;
+        font-size: 2.188rem;
+    }
+    /* 헤더 */
+    header .wrap_inner{
+        padding: 0;
+    }
+    header .gnb li.pc, header .gnb li.popol{
+        display: block;
+    }
+    header .gnb.left{
+        width: 350px;
+    }
+    header .gnb.left li{
+        float: left;
+        width: 110px;
+    }
+    header .gnb.left li.pc a,
+    header .gnb.right li.popol a{
+        display: block;
+        width: 110px;
+    }
+    header .gnb.left li.pc a,
+    header .gnb.right li.popol a,
+    header .gnb.right .popol .depth li.pc a{
+        display: inline-block;
+        color: #3E3232;
+        font-size: 18px;
+        font-size: 1.125rem;
+        text-align: left;
+        cursor: pointer;
+    }
+    header .gnb.right{
+        position: relative;
+        width: 180px;
+        height: 70px;
+    }
+    header .gnb.right .popol{
+        line-height: 70px;
+    }
+    header .gnb.right .popol .depth{
+        position: absolute;
+        top: 60px;
+        left: -65px;
+        z-index: 300;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #FFB0B0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s linear;
+    }
+    header .gnb.right .popol .depth:before{
+        content:'';
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: 300;
+        width: 10px;
+        height: 10px;
+        background-color: #FFB0B0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s linear;
+    }
+    header .gnb.right .popol .depth li.pc{
+        padding: 5px 0;
+    }
+    header .gnb.right .popol .depth li.pc a{
+        display: block;
+        width: 100%;
+        height: 0;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 0;
+    }
+    header .gnb.right .popol .depth li.pc a:hover{
+        color: #fff;
+    }
+    header .gnb.right .popol:hover .depth,
+    header .gnb.right .popol:hover .depth:before{
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.25s linear;
+    }
+    header .gnb.right li.mypage a{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /* [섹션1] about */
+    #main .desc_inner > div{
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+    #main .desc_inner .desc{
+        margin-right: 2%;
+    }
+    #main .about h3{
+        margin-bottom: 30px;
+    }
+    #main .about table.text,
+    #main .about .symbol ul li p,
+    #main .about .outro{
+        font-size: 16px;
+        font-size: 1rem;   
+    }
+    #main .about .symbol ul li{
+        width: 100px;
+        height: 100px;
+    }
+    #main .about .outro .mobile{
+        display: none;
+    }
+    /* [섹션4, 섹션5, 섹션6, 섹션7] 공통 */
+    #main .desc_inner{
+        margin-bottom: 40px;
+    }
+    #main .popol .desc_inner > div{
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+    #main .popol .desc_inner .desc{
+        margin-right: 2%;
+    }
+    #main .popol p.sub{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    #main .popol h3.sub_title,
+    #main .preview ul.prev_inner li.prev p.device{
+        font-size: 20px;
+        font-size: 1.250rem;    
+    }
+    #main .desc_inner .desc .btn_view a.view{
+        display: block;
+        width: 100%;
+        padding: 4px 8px;
+    }
+    #main .desc table,
+    #main .desc .btn_view a.view,
+    #main .desc_inner .text2{
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    #main .popol h3.sub_title{
+        margin-bottom: 15px;
+    }
+    #main .desc_inner .text2{
+        margin-bottom: 0;
+    }
+    #main .preview ul.prev_inner li.prev.pc{
+        width: 40%;
+    }
+    #main .preview ul.prev_inner li.prev.ta{
+        width: 30%;
+        margin: 0 2%;
+    }
+    #main .preview ul.prev_inner li.prev.mo{
+        width: 26%;
+    }
+
+}

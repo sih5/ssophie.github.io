@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>본앤브레드 로그인</title>
+    <!-- Xeicon -->
+    <link rel="stylesheet" href="../etc/XEIcon-2.2.0/xeicon.min.css">
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="../css/born-bred_login.css">
+    <link rel="icon" href="../images/born-bred/favicon.ico">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="login_inner">
+            <form class="login">
+                <h1><img src="../images/born-bred/logo.png">로그인</h1>
+                <span class="field">이메일 주소</span>
+                <input type="email" placeholder="이메일 주소를 입력해주세요">
+                <span class="field">비밀번호</span>
+                <input type="password" placeholder="비밀번호를 입력해주세요.">
+                <div class="save-info">
+                    <label><input type="checkbox" id="save-email"><em></em>이메일 저장</label>
+                    <a href="#none">비밀번호 찾기</a>
+                </div>
+                <div class="event-info">
+                    본앤브래드의 이벤트 소식을 받아보시겠습니까?
+                    <div class="custom-checkbox">
+                        <label><input type="radio" name="event" checked><em></em>예.</label>
+                        <label><input type="radio" name="event"><em></em>아니오.</label>
+                    </div>
+                </div>
+                <input type="button" value="로그인">
+                <div class="sns-info">
+                    다른 방법으로 로그인하기
+                    <div class="sns">
+                        <a href="#none"><i class="xi-google"></i></a>
+                        <a href="#none"><i class="xi-facebook"></i></a>
+                        <a href="#none"><i class="xi-naver"></i></a>
+                        <a href="#none"><i class="xi-kakaostory"></i></a>
+                    </div>
+                </div>
+                <div class="signup-info">
+                    <span>회원가입이 필요하신가요?</span>
+                    <a href="#none">회원가입하러가기</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

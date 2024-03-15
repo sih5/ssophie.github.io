@@ -1,0 +1,1043 @@
+@charset "utf-8";
+
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800&display=swap');
+/* font-family: 'Hahmlet', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+*, *:before, *:after {box-sizing:border-box;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; line-height: 1.6;}
+body {min-width: 320px; font-family: 'Hahmlet', serif; background-color: #040D12;word-break: break-all; color: #fff; -webkit-text-size-adjust: none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
+ul, li{list-style: none;}
+a{margin:0; padding:0; text-decoration: none; color: #eee; font-family: 'Hahmlet', serif; vertical-align: baseline; cursor: pointer;}
+img{width: 100%; height: auto; vertical-align: top;}
+hr{display: block; margin: 0; padding: 0; border: 0;}
+table{border-collapse: collapse; border-spacing: 0;}
+input{margin: 0; padding: 0; border-radius: 0; outline: none; vertical-align: top; -webkit-appearance: none; appearance: none;}
+.dvider{width: 95%; height: 1px; margin: 0 auto; margin-top: 80px; margin-bottom: 30px; background:#bbb;}
+
+/* ########## 모바일용 CSS ########## */
+body.view_nav{
+    overflow: hidden;
+}
+body.view_nav #dimmed{
+    display: block;
+}
+#dimmed{
+    display: none; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 100; 
+    width: 100%; 
+    height: 100%; 
+    background:rgba(0, 0, 0, 0.5);
+}
+.btn_scroll{
+    position: fixed;
+    bottom: 10px; 
+    right: 10px;  
+    z-index: 100; 
+    width: 32px;
+}
+.btn_scroll a{
+    display: block; 
+    height: 32px; 
+    border: 2px solid #C0885C;
+    border-radius: 50%;
+    background-color: #C0885C;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 32px auto; 
+    font-size: 0; 
+    text-align: center;
+}
+.btn_scroll a.up{
+    background-image: url(../images/born-bred/scrollup.png);
+}
+#wrapper{
+    position: relative;
+    text-align: left;
+}
+.wrap_inner{
+    padding: 0 5%;
+}
+/* 헤더 */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    transition: all 0.35s;
+}
+header .top_bnr{
+    height: 35px;
+    position: relative;
+    background-color: #dc143c;
+    text-align: center;
+}
+header .top_bnr a{
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    font-size: 0.938rem;
+    font-weight: 300;
+    line-height: 32px;
+}
+header.scroll{
+    top: -35px;
+}
+header .mo_hd{
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+header .mo_hd h1 a{
+    display: block;
+    color: #C0885C;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-align: center;
+    line-height: 50px;
+}
+header .mo_hd h1 a img{
+    width: 36px;
+    height: auto;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+header .mo_hd .mo_gnb li a{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 32px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    color: transparent;
+    font-size: 0;
+    text-align: center;
+}
+header .mo_hd .mo_gnb li.category a{
+    left: 10px;
+    background-image: url(../images/born-bred/icon_hd_menu.png);
+}
+header .mo_hd .mo_gnb li.mypage a{
+    left: 45px;
+    background-image: url(../images/born-bred/icon_hd_mypage.png);
+}
+header .mo_hd .mo_gnb li.search a{
+    right: 45px;
+    background-image: url(../images/born-bred/icon_hd_search.png);
+}
+header .mo_hd .mo_gnb li.cart a{
+    right: 10px;
+    background-image: url(../images/born-bred/icon_hd_cart.png);
+}
+header .pc_hd_dsp{
+    display: none;
+}
+/* 헤더 검색 */
+header .box_search{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #fff;
+    text-align: left;
+}
+header .box_search .box{
+    position: relative;
+    padding: 0 50px;
+    border-bottom: 1px solid #ddd;
+}
+header .box_search .box .close{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 32px;
+    height: 45px;
+    background: url(../images/born-bred/icon_nav_search_close.png) no-repeat center/32px;
+    color: transparent;
+    cursor: pointer;
+}
+header .box_search .box .basic_search{
+    width: 100%;
+    height: 45px;
+    border: 0;
+    background: transparent;
+}
+header .box_search .box .btn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+}
+header .box_search .keyword{
+    padding: 20px;
+}
+header .box_search .keyword dl dt{
+    color: #333;
+    font-size: 20px;
+    font-size: 1.250rem;
+}
+header .box_search .keyword dl dd{
+    padding: 3px 0;
+}
+header .box_search .keyword dl dd a{
+    color: #333;
+}
+header .box_search .keyword dl dd a:before{
+    content: '#';
+    margin-right: 5px;
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+/* 내비게이션 메뉴 */
+nav.lnb{
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 200;
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.35s ease-in-out;
+}
+nav.lnb .close{
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: url(../images/born-bred/icon_close.png) no-repeat center/40px;
+    color: transparent;
+}
+nav.lnb .all{
+    display: block;
+    padding: 35px 10px;
+    color: #333;
+    font-size: 22px;
+    font-size: 1.375rem;
+}
+nav.lnb .cate_list{
+    padding: 0 10px;
+}
+nav.lnb .cate_list > li > a{
+    display: block;
+    height: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid #C0885C;
+    color: #C0885C;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+nav.lnb .cate_list .first{
+    position: relative;
+}
+nav.lnb .cate_list .first:before{
+    content: '\e942';
+    font-family: xeicon;
+    position: absolute;
+    right: 10px;
+}
+nav.lnb .cate_list .first.selected:before{
+    content: '\e945';   
+}
+nav.lnb .cate_list .second{
+    display: none;
+    margin-bottom: 5px;
+}
+nav.lnb .cate_list .second a{
+    display: block;
+    height: 30px;
+    color: #555;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 1;
+}
+nav.lnb .cate_list .second a:hover{
+    opacity: 0.5;
+}
+nav.lnb .cate_sub{
+    margin-top: 10px;
+    padding: 10px;
+}
+nav.lnb .cate_sub li {
+    margin-bottom: 5px;
+}
+nav.lnb .cate_sub li a{
+    color: #555;
+    font-size: 18px;
+    font-size: 1.125rem;
+    opacity: 1;
+}
+nav.lnb .cate_sub li a:hover{
+    opacity: 0.5;
+}
+nav.lnb.is_show{
+    left: 0;
+    visibility: visible;
+}
+/* 메인 비주얼 슬라이드 */
+#main{
+    overflow: hidden;
+}
+#main .main_visual .swiper-slide .pc{
+    display: none;
+}
+#main .main_visual{
+    margin-top: 85px;
+}
+#main .main_visual .swiper{
+    width: 100%;
+    height: 100%;
+}
+#main .main_visual .swiper-slide{
+    position: relative;
+}
+#main .main_visual .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#main .main_visual .swiper-slide .text.slide1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    font-size: 16px;
+    font-size: 1rem;
+    text-align: center;
+}
+#main .main_visual .swiper-slide .text{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font-size: 16px;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #000;
+}
+#main .main_visual .swiper-slide .text > a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-align: center;
+}
+#main .main_visual .swiper-slide .text > a:hover{
+    border: 1px solid #dc143c;
+    background-color: #dc143c;
+}
+#main .main_visual .swiper-button-next,
+#main .main_visual .swiper-button-prev{
+    color: #ddd;
+}
+#main .main_visual .swiper-pagination-bullet{
+    background: var(--swiper-pagination-bullet-inactive-color,#C0885C);
+}
+/* [섹션1] SHOP */
+#main h3.title{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-size: 2.5rem;
+}
+#main .shop_prd .tab_shop > li{
+    display: inline-block;
+    width: 32.333333333%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#main .shop_prd .tab_shop > li > a{
+    display: block;
+    border-bottom: 1px solid transparent;
+    font-size: 13px;
+    font-size: 0.813rem;
+}
+#main .shop_prd .tab_shop li a.checked{
+    border-bottom: 1px solid #C0885C;
+    color: #C0885C;
+    font-weight: bold;
+}
+#main .shop_prd .tabcnt_shop{
+    margin-top: 20px;
+}
+#main .shop_prd .tabcnt_shop .prd_basic > li{
+    display: inline-block;
+    width: 47.34895833%;
+}
+#main .shop_prd .tabcnt_shop .prd_basic > li:nth-of-type(odd){
+    margin-right: 10px;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .box{
+    margin-bottom: 20px;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img .prdimg img{
+    border-radius: 10px;
+    box-shadow: 0 0 3px #aaa;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img{
+    position: relative;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img .wish a{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/born-bred/list_wish.png) no-repeat center/20px;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img .cart a{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/born-bred/list_cart.png) no-repeat center/30px;
+    transition: all 0.35s;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img .cart a:hover{
+    transform: scale(0.9);
+}
+#main .shop_prd .tabcnt_shop .prd_basic .img .best img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .name a{
+    font-size: 13px;
+    font-size: 0.813rem;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .price{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 0;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .price span{
+    font-size: 11px;
+    font-size: 0.688rem;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .price .aging{
+    display: block;
+}
+#main .shop_prd .tabcnt_shop .prd_basic .info .price.set_price .sell{
+    display: block;
+}
+/* [섹션2] 명절세트 광고 */
+#main .holiday{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+#main .holiday .pc_ad{
+    display: none;
+}
+#main .holiday .holiday_ad{
+    position: relative;
+}
+#main .holiday .mo_ad img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px #C0885C;
+}
+#main .holiday .mo_ad .desc{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    color:#C0885C;
+    text-align: center;
+}
+#main .holiday .mo_ad .btn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#main .holiday .mo_ad .btn > a{
+    color:#C0885C;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#main .holiday .mo_ad .btn > a:hover{
+    color: #dc143c;
+    font-weight: bold;
+}
+#main .holiday .pc_ad .btn > a:hover{
+    color: #dc143c;
+    font-weight: bold;
+}
+/* [섹션3] 레스토랑 */
+#main .shop_intro.pc{
+    display: none;
+}
+#main .shop_intro{
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+    font-size: 0.813rem;
+}
+#main .shop_intro .shop_img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#main .shop_intro img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: all 1s ease-in;
+    cursor: pointer;
+}
+#main .shop_intro img:hover{
+    transform: scale(1.4);
+}
+#main .shop_intro p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* [섹션4] 레스토랑 지도 */
+#main .shop_map .kakao_map{
+    width: 100%;
+}
+#main .shop_map ul{
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #C0885C;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #333;
+}
+#main .shop_map ul li{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-size: 0.938rem;
+}
+#main .shop_map ul li a{
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px solid #C0885C;
+    color: #333;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold
+}
+#main .shop_map ul li a:hover{
+    color: #dc143c;
+}
+#main .shop_map ul li span{
+    font-weight: bold;
+}
+/* 푸터 */
+footer{
+    color: #C0885C;
+    font-size: 13px;
+    font-size: 0.813rem;
+    font-weight: normal;
+}
+footer h3{
+    text-shadow: 0 0 10px #fff;
+}
+footer .contact{
+    position: relative;
+}
+footer .contact img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 86px;
+}
+footer .contact .open{
+    margin-bottom: 10px;
+}
+footer .contact .open a{
+    color: #C0885C;
+    border-bottom: 1px solid #C0885C;
+}
+footer .contact .sns li{
+    display: inline-block;
+}
+footer .contact .sns li i{
+    margin-left: 10px;
+    color: #C0885C;
+    font-size: 16px;
+    font-size: 1rem;
+}
+footer .company_info .menu{
+    margin: 10px 0;
+}
+footer .company_info .menu li{
+    display: inline-block;
+}
+footer .company_info .menu li a{
+    color: #C0885C;
+    font-size: 11px;
+    font-size: 0.688rem;
+}
+footer .company_info .info a{
+    color: #C0885C;
+    border-bottom: 1px solid #C0885C;
+}
+footer .copyright{
+    margin: 10px 0;
+}
+footer .contact .open a:hover,
+footer .company_info .menu li a:hover,
+footer .company_info .info a:hover{
+    opacity: 0.5;
+}
+
+/* ########## 태블릿용 CSS ########## */
+@media all and (min-width: 768px){
+    .wrap_inner{
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    /* 내비게이션 메뉴 */
+    nav.lnb{
+        left: -40%;
+        width: 40%;
+    }
+    /* 메인 비주얼 슬라이드 */
+    #main .main_visual{
+        position: relative;
+        max-width: 1920px;
+        height: 600px;
+        margin-top: 85px;
+        overflow: hidden;
+    }
+    #main .main_visual .swiper-slide img{
+        display: block;
+        width: 100%;
+        height: 600px;
+    }
+    #main .main_visual .swiper-slide .text.slide1{
+        font-size: 25px;
+        font-size: 1.563rem;
+    }
+    #main .main_visual .swiper-slide .text{
+        top: 60%;
+        left: 6%;
+        font-size: 20px;
+        font-size: 1.250rem;
+    }
+    /* [섹션1] SHOP */
+    #main .shop_prd .tab_shop > li{
+        width: 15.79861111%;        
+    }
+    #main .shop_prd .tab_shop > li > a{
+        font-size: 15px;
+        font-size: 0.938rem;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic > li{
+        width: 23%;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic > li{
+        margin-right: 10px;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic > li:last-child{
+        margin-right: 0;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic .box{
+        margin-bottom: 30px;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic .info .name{
+        margin-top: 8px;
+    }
+    /* [섹션2] 명절세트 광고 */
+    #main .holiday{
+        margin-top: 80px;
+    }
+    #main .holiday .mo_ad{
+        display: none;
+    }
+    #main .holiday .pc_ad{
+        display: block;
+    }
+    #main .holiday .holiday_ad{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: #ccc;
+    }
+    #main .holiday .pc_ad .img_ad img{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        width: auto;
+        height: 280px;
+        border-radius: 50%;
+    }
+    #main .holiday .pc_ad .desc{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        color:#333;
+        font-size: 20px;
+        font-size: 1.250rem;
+    }
+    #main .holiday .pc_ad .desc span{
+        color: #dc143c;
+    }
+    #main .holiday .pc_ad .desc .btn{
+        margin-top: 20px;
+    }
+    #main .holiday .pc_ad .desc .btn > a{
+        padding: 8px 20px;
+        background-color: #C0885C;
+    }
+    /* [섹션3] 레스토랑 */
+    #main .shop_intro.mo{
+        display: none;
+    }
+    #main .shop_intro.pc{
+        display: block;
+        font-size: 15px;
+        font-size: 0.938rem;
+    }
+    #main .shop_intro_sub > li{
+        display: inline-block;
+        width: 48%;
+    }
+    #main .shop_intro_sub > li:nth-of-type(odd){
+        margin-right: 10px;
+    }
+    /* [섹션4] 레스토랑 지도 */
+    #main .shop_map .wrap_inner{
+        position: relative;
+    }
+    #main .shop_map .kakao_map{
+        width: 60%;
+    }
+    #main .shop_map ul{
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        width: 35%;
+        height: 80%;
+    }
+    #main .shop_map ul li{
+        margin-bottom: 25px;
+    }
+    /* 푸터 */
+    footer{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    footer .contact > div{
+        display: inline-block;
+        margin-right: 50px;
+        vertical-align: top;
+    }
+    footer .contact img{
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 86px;
+    }
+    footer .contact .sns ul{
+        display: inline-block;
+    }
+    footer .contact .sns li i{
+        margin-left: 10px;
+        color: #C0885C;
+        font-size: 20px;
+        font-size: 1.250rem;
+    }
+    footer .company_info .menu{
+        margin: 10px 0;
+    }
+    footer .company_info .menu li{
+        display: inline-block;
+    }
+    footer .company_info .menu li a{
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    footer .company_info .info{
+        display: inline-block;
+        width: 48%;
+    }
+    footer .copyright{
+        margin-top: 20px;
+        font-size: 13px;
+        font-size: 0.813rem;
+        text-align: left;
+    }
+}
+
+/* ########## PC용 CSS ########## */
+@media all and (min-width: 1024px){
+    header .mo_hd_dsp{
+        display: none;
+    }
+    header .pc_hd_dsp{
+        display: block;
+        background-color: #fff;
+    }
+    header .pc_hd{
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        max-width: 1280px;
+        height: 65px;
+        margin: 0 auto;
+    }
+    header .pc_hd h1 a{
+        color: #C0885C;
+        font-size: 25px;
+        font-size: 1.563rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        text-align: center;
+        line-height: 65px;
+    }
+    header .pc_hd h1 a img{
+        width: 50px;
+        height: auto;
+        margin-top: 8px;
+        margin-right: 5px;
+    }
+    header .pc_hd .pc_gnb{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    header .pc_hd .pc_gnb > ul{
+        font-size: 0;
+    }
+    header .pc_hd .pc_gnb > ul > li{
+        display: inline-block;
+        margin-right: 50px;
+        vertical-align: middle;
+    }
+    header .pc_hd .pc_gnb > ul > li > a{
+        display: block;
+        color: #333;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 65px;
+    }
+    header .pc_hd .pc_gnb > ul > li.category a{
+        width: 50px;
+        height: 65px;
+        background: url(../images/born-bred/icon_hd_menu.png) no-repeat center/45px;
+        color: transparent;
+        font-size: 0;
+        text-align: center;
+    }
+    header .pc_hd .pc_gnb > ul > li.prd,
+    header .pc_hd .login > ul > li.mypage{
+        position: relative;
+    }
+    header .pc_hd .depth{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 150px;
+        padding: 10px;
+        border: 1px solid #C0885C;
+        background-color: #fff;
+    }
+    header .pc_hd .depth:before{
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid #C0885C;
+        border-top: 1px solid #C0885C;
+        background-color: #fff;
+    }
+    header .pc_hd .depth > li {
+        padding: 3px 0;
+    }
+    header .pc_hd .depth > li > a{
+        color: #333;
+        font-size: 16px;
+        font-size: 1rem;
+        text-align: center;
+    }
+    header .pc_hd .depth > li > a:hover{
+        color: #C0885C;
+    }
+    header .pc_hd .login{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    header .pc_hd .login .login_menu{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header .pc_hd .login .login_menu > li{
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+    header .pc_hd .login .login_menu > li > a{
+        padding-right: 50px;
+        color: #333;
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    header .pc_hd .login .icon_menu{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header .pc_hd .login .icon_menu > li{
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+    header .pc_hd .login .icon_menu > li > a{
+        display: block;
+        width: 60px;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        color: transparent;
+    }
+    header .pc_hd .login .icon_menu li.mypage > a{
+        background-image: url(../images/born-bred/icon_hd_mypage.png);
+    }
+    header .pc_hd .login .icon_menu li.search{
+        position: relative;
+    }
+    header .box_search{
+        position: absolute;
+        top: 55px;
+        left: -250%;
+        width: 240px;
+        height: 280px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    header .box_search .box{
+        padding-left: 10px;
+    }
+    header .box_search .box .close{
+        display: none;
+    }
+    header .pc_hd .login .icon_menu li.search > a{
+        background-image: url(../images/born-bred/icon_hd_search.png);
+        font-size: 0;
+    }
+    header .pc_hd .login .icon_menu li.search > a.active{
+        background-image: url(../images/born-bred/icon_close.png);
+    }
+    header .pc_hd .login .icon_menu li.cart > a{
+        background-image: url(../images/born-bred/icon_hd_cart.png);
+    }
+    header .pc_hd .pc_gnb > ul > li.prd:hover > .depth,
+    header .pc_hd .login > ul > li.mypage:hover > .depth{
+        display: block;
+    }
+    nav.lnb{
+        left: -20%;
+        width: 20%;
+    }
+    /* 메인 비주얼 슬라이드 */
+    #main .main_visual{
+        height: 800px;
+    }
+    #main .main_visual .swiper-slide img{
+        height: 800px;
+    }
+    #main .main_visual .swiper-slide .mo{
+        display: none;
+    }
+    #main .main_visual .swiper-slide .pc{
+        display: block;
+    }
+    #main .main_visual .swiper-slide .text.slide1{
+        font-size: 30px;
+        font-size: 1.875rem;;
+    }
+    #main .main_visual .swiper-slide .text{
+        font-size: 25px;
+        font-size: 1.563rem;
+    }
+    #main .main_visual .swiper-slide .text > a{
+        font-size: 20px;
+        font-size: 1.250rem;
+    }
+    /* [섹션1] SHOP */
+    #main .shop_prd .tab_shop > li > a{
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic .info .name a{
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    #main .shop_prd .tabcnt_shop .prd_basic .info .price span{
+        font-size: 15px;
+        font-size: 0.938rem;
+    }
+    /* [섹션2] 명절세트 광고 */
+    #main .holiday .pc_ad .img_ad img{
+        left: 15%;
+    }
+    #main .holiday .pc_ad .desc{
+        left: 45%;
+        font-size: 22px;
+        font-size: 1.375rem;
+    }
+    #main .holiday .pc_ad .desc .ta{
+        display: none;
+    }
+    /* [섹션2] 명절세트 광고 */
+    #main .shop_intro.pc{
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    /* 푸터 */
+    footer .contact img{
+        top: 5px;
+    }
+}

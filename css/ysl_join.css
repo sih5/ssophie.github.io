@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Triangles&display=swap');
+/* font-family: 'Rubik Doodle Triangles', system-ui; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+*, *:before, *:after {box-sizing:border-box;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; line-height: 1.6;}
+body {min-width: 320px; font-family: 'IBM Plex Sans KR', sans-serif; color: #fff; font-weight: 500; background-color: #000; word-break: break-all; -webkit-text-size-adjust: none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
+ul, li{list-style: none;}
+a{margin: 0; padding: 0; color: #fff; font-family: 'IBM Plex Sans KR', sans-serif; font-weight: 600; text-decoration: none; vertical-align: baseline; cursor: pointer;}
+img{vertical-align: top;}
+table{border-collapse: collapse; border-spacing: 0;}
+input, select, button{margin: 0; padding: 0; border: 0; border-radius: 0; outline: none; vertical-align: top; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+header input::placeholder{font-family: 'IBM Plex Sans KR', sans-serif;}
+
+input, select{
+    cursor: pointer;
+}
+select{
+    background: #fff url(../images/ysl/icon_select.png) no-repeat center right 10px;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type=number]{
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+.member{
+    width: 460px;
+    margin: auto;
+    padding: 0 20px;
+}
+.member .logo{
+    display: block;
+    margin: 50px auto;
+    margin-bottom: 40px;
+}
+.field{
+    margin: 5px 0;
+}
+.field b{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.member input:not(input[type=radio]), .member select{
+    border: 1px solid #dadada;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 15px;
+}
+.member input[type=button],
+.member input[type=submit]{
+    background-color: #FF3399;
+    color: #fff;
+}
+.member input:not(input[type=radio]):focus, .member select:focus{
+    border: 1px solid #FF3399;
+}
+.field.birth div{
+    display: flex;
+    gap: 10px;
+}
+.field.tel-number div{
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+}
+.field.tel-number div input:nth-child(1){
+    flex: 2
+}
+.field.tel-number div input:nth-child(2){
+    flex: 1;
+}
+.field.gender{
+    color: #000;
+}
+.field.gender div{
+    padding: 15px 5px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+}
+.placehold-text{
+    position: relative;
+    display: block;
+}
+.placehold-text:before{
+    content: '@naver.com';
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    pointer-events: none;
+}
+.userpw{
+    background: #fff url(../images/ysl/icon-01.png) no-repeat center right 15px;
+    background-size: 20px;
+}
+.userpw-confirm{
+    background: #fff url(../images/ysl/icon-02.png) no-repeat center right 15px;
+    background-size: 20px;
+}
+.member-footer{
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+.member-footer ul li{
+    display: inline-block;
+}
+.member-footer div a:nth-of-type(2){
+    font-weight: 500;
+}
+.member-footer a:hover{
+    color: #FF3399;
+    text-decoration: underline;
+}
+.member-footer ul li a:after{
+    content: '|';
+    display: inline-block;
+    transform: translateY(-2px);
+    margin-right: 5px;
+    padding-left: 7px;
+    color: #bbb;
+    font-size: 10px;
+}
+.member-footer div a:last-child:after{
+    display: none;
+}
+/* checked 라디오 버튼 */
+.field.gender input[name=gender]{
+    display: none;
+}
+.field.gender label{
+    margin-right: 5px;
+    cursor: pointer;
+}
+.field.gender label em{    
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+    transform: translateY(3px);
+    background: url(../images/ysl/icon_radio.png) no-repeat;
+    background-position: left;
+}
+.field.gender input[name=gender]:checked + em{
+    background-position: right;
+}  
+@media (max-width: 768px){
+    .member{
+        width: 100%;
+    }
+}

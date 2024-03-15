@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 소피의 포트폴리오</title>
+    <!-- jQuery -->
+    <script src="../script/jquery/jquery-3.7.1.min.js"></script>
+    <!-- Xeicon -->
+    <link rel="stylesheet" href="../etc/XEIcon-2.2.0/xeicon.min.css">
+    <style>
+        @charset "utf-8";
+        /* 구글폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        *, *:before, *:after {box-sizing:border-box;}
+        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; line-height: 1.6;}
+        body {color: #000; font-family: 'Noto Sans KR', serif; word-break: break-all; -webkit-text-size-adjust: none;}
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
+        ul, li{list-style: none;}
+        a{margin: 0; padding: 0; color: #000; font-family: 'Noto Sans KR', serif; text-decoration: none; vertical-align: baseline; cursor: pointer;}
+        table{border-collapse: collapse; border-spacing: 0;}
+        nav{
+            width: 100%;
+            height: 70px;
+            overflow: hidden;
+            background-color: #F5EEE6;
+        }
+        button{
+            border: 0;
+            background-color: transparent;
+        }
+        .device-select{
+            display: table;
+            margin: 0 auto !important;
+        }
+        .device-select li{
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .device-select li i{
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .device-select li a{
+            display: inline-block;
+            transform: translateY(-5px);
+            padding: 2px 5px;
+            font-size: 17px;
+            font-weight: 600;
+            border: 2px solid #000;
+            border-radius: 5px;
+        }
+        .device-select li.active i{
+            color: #CE5A67;
+            font-size: 40px;
+        }
+        iframe.device-preview-inner.pc{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+        iframe.device-preview-inner.tablet{
+            position: absolute;
+            top: 100px !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+            width: 768px;
+            height: 800px;
+            max-width: 768px !important;
+            max-height: 800px !important;
+        }
+        iframe.device-preview-inner.mobile{
+            position: absolute;
+            top: 100px !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+            width: 375px;
+            height: 667px;
+            max-width: 375px !important;
+            max-height: 667px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="device-select">
+            <li class="pc active">
+                <button onclick="device_view('pc');">
+                    <i class="xi-desktop"></i>
+                </button>
+            </li>
+            <li class="tablet">
+                <button onclick="device_view('tablet');">
+                    <i class="xi-tablet"></i>
+                </button>
+            </li>
+            <li class="mobile">
+                <button onclick="device_view('mobile');">
+                    <i class="xi-mobile"></i>
+                </button>
+            </li>
+            <li class="full">
+                <button>
+                    <a href="../html/ysl.html" target="_blank">전체화면으로 보기</a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <iframe class="device-preview-inner pc" src="../html/ysl.html"></iframe>
+    <iframe class="device-preview-inner tablet" src="../html/ysl.html"></iframe>
+    <iframe class="device-preview-inner mobile" src="../html/ysl.html"></iframe>
+
+    <script>
+        function device_view(type) {
+            if(!type) return;
+            if (type == 'pc') {
+                $('.device-preview-inner').removeClass('mobile tablet');
+                $('.device-preview-inner').addClass(type);
+                $('.device-select li').removeClass('active');
+                $('.device-select li.pc').addClass('active');
+            } else if(type == 'tablet') {
+                $('.device-preview-inner').removeClass('pc mobile');
+                $('.device-preview-inner').addClass(type);
+
+                $('.device-select li').removeClass('active');
+                $('.device-select li.tablet').addClass('active');
+
+            } else if(type == 'mobile') {
+                $('.device-preview-inner').removeClass('pc tablet');
+                $('.device-preview-inner').addClass(type);
+                $('.device-select li').removeClass('active');
+                $('.device-select li.mobile').addClass('active');
+            }
+            return false;
+        };
+        device_view('pc');
+    </script>
+</body>
+</html>

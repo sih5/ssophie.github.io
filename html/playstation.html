@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation</title>
+    <!-- jQuery -->
+    <script src="../script/jquery/jquery-3.7.1.min.js"></script>
+    <script src="../script/jquery/jquery.rwdImageMaps.min.js"></script>
+    <!-- Swiper slider -->
+    <script src="../script/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper/swiper.css">
+    <!-- Xeicon -->
+    <link rel="stylesheet" href="../etc/XEIcon-2.2.0/xeicon.min.css">
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="../css/playstation.css">
+    <link rel="icon" href="../images/ps/favicon.ico">
+    <script src="../script/playstation.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- ########### 상단 시작 ###########-->
+        <!----- 헤더 ----->
+        <header>
+            <div class="wrap_inner">
+                <div class="hd_inner cfixed">
+                    <ul class="gnb left mo_gnb">
+                        <li class="category">
+                            <a onclick="toggle_nav('lnb', this); return false;">카테고리</a>
+                        </li>
+                        <li class="logo">
+                            <h1><a href="#"><img src="../images/ps/logo_w.png"></a></h1>
+                        </li>
+                    </ul>
+                    <div class="pc_gnb logo">
+                        <h1><a href="#"><img src="../images/ps/logo_w.png">PlayStation</a></h1>
+                    </div>
+                    <ul class="pc_gnb center">
+                        <li class="prd">
+                            <a href="#none">게임</a>
+                            <ul class="depth">
+                                <li><a href="#none">PS5</a></li>
+                                <li><a href="#none">PS4</a></li>
+                                <li><a href="#none">PS VR2</a></li>
+                                <li><a href="#none">PC</a></li>
+                                <li><a href="#none">PS Plus</a></li>
+                            </ul>
+                        </li>
+                        <li class="prd">
+                            <a href="#none">스토어</a>
+                            <ul class="depth">
+                                <li><a href="#none">PS독점 타이틀</a></li>
+                                <li><a href="#none">PS5 타이틀</a></li>
+                                <li><a href="#none">PS4 타이틀</a></li>
+                            </ul>
+                        </li>
+                        <li class="prd">
+                            <a href="#none">고객지원</a>
+                            <ul class="depth">
+                                <li><a href="#none">계정</a></li>
+                                <li><a href="#none">PSN상태</a></li>
+                                <li><a href="#none">정기구독서비스</a></li>
+                                <li><a href="#none">하드웨어</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">Join/Login</a></li>
+                    </ul>
+                    <ul class="gnb right">
+                        <li class="search">
+                            <a onclick="toggle_view('box_search', this);">Search</a>
+                        </li>
+                        <li class="cart">
+                            <a href="#none">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- MO/TA 헤더 검색창 -->
+            <div class="box_search" id="box_search">
+                <form method="get">
+                    <div class="box">
+                        <input type="search" name="search_str" value class="basic_search" autocorrect="auto" autocomplete="off" autocapitalize="off" placeholder="검색어를 입력해주세요">
+                        <input type="image" class="btn" src="../images/ps/btn_seasrch.png" alt="검색">
+                    </div>
+                </form>
+            </div>
+            <!-- MO/TA 내비게이션 메뉴 -->
+            <nav class="lnb">
+                <div class="login">
+                    <a href="#none">Join/Login</a>
+                    <a href="#none">Mypage</a>
+                </div>
+                <ul class="cate_list drop">
+                    <li class="cate">
+                        <a href="#none" class="first">게임</a>
+                        <ul class="second">
+                            <li><a href="#none">PS5</a></li>
+                            <li><a href="#none">PS4</a></li>
+                            <li><a href="#none">PS VR2</a></li>
+                            <li><a href="#none">PC</a></li>
+                            <li><a href="#none">PS Plus</a></li>
+                        </ul>
+                    </li>
+                    <li class="cate">
+                        <a href="#none" class="first">스토어</a>
+                        <ul class="second">
+                            <li><a href="#none">PS독점 타이틀</a></li>
+                            <li><a href="#none">PS5 타이틀</a></li>
+                            <li><a href="#none">PS4 타이틀</a></li>
+                        </ul>
+                    </li>
+                    <li class="cate">
+                        <a href="#none" class="first">고객지원</a>
+                        <ul class="second">
+                            <li><a href="#none">계정</a></li>
+                            <li><a href="#none">PSN상태</a></li>
+                            <li><a href="#none">정기구독서비스</a></li>
+                            <li><a href="#none">하드웨어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ########### 중앙(콘텐츠) 시작 ###########-->
+        <section id="content">
+            <div id="main">
+                <!-- 메인 비주얼 슬라이드 -->
+                <section class="main_visual">
+                    <div class="swiper-container swiper_main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_01.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Lies of P</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_02.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Hogwarts Legacy</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_03.jpg"></a></span>
+                                <div class="text">
+                                    <h2>JEDI : Survivor</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_04.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Jurassic World</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_05.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Guardians of The Galaxy</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_06.jpg"></a></span>
+                                <div class="text">
+                                    <h2>A Plague Tale :Requem</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_07.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Little Nightmarres</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_08.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Ditroit Become Human</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_09.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Assassins Creed</h2>
+                                    <p></p>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <span><a href="#none"><img src="../images/ps/slide_10.jpg"></a></span>
+                                <div class="text">
+                                    <h2>Call of Duty</h2>
+                                    <a href="#none">MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next arrow"></div>
+                        <div class="swiper-button-prev arrow"></div>
+                    </div>
+                </section>
+                <!-- 카테고리 바로가기 -->
+                <section class="shortcut">
+                    <div class="wrap_inner">
+                        <ul class="shortcut_inner">
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate01.jpeg">
+                                    <p>할인</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate02.jpg">
+                                    <p>PS5 게임</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate03.jpeg">
+                                    <p>PS4 게임</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate04.jpeg">
+                                    <p>DLC/추가</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate05.jpeg">
+                                    <p>PS Plus</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate06.jpeg">
+                                    <p>무료</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate07.jpeg">
+                                    <p>PS VR2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/ps/cate08.jpg">
+                                    <p>PS VR1</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- [섹션1] 추천 게임 -->
+                <section class="recommend">
+                    <div class="photo1">
+                        <img src="../images/ps/lies/recommend_lies_01.jpg">
+                    </div>
+                    <div class="text_score wrap_inner">
+                        <div class="text">
+                            <h3 class="sub_title">잔혹 동화 액션 게임</h3>
+                            <h2 class="name">P의 거짓</h2>
+                            <p class="desc">
+                                피의 비극이 벌어지고 있는 크라트 시의 절망적인 상황을<br class="mo_pc">
+                                해결하기 위해 미쳐버린 인형들과 맞서는 여정을 떠나다.
+                            </p>
+                        </div>
+                        <div class="score">
+                            <div class="wrap_inner2">
+                                <div class="score_item">
+                                    <h2 class="title2">OpenCritic</h2>
+                                    <div class="circle_score">
+                                        <h3 class="sub_title">오픈스코어</h3>
+                                        <div class="progress" style="background: conic-gradient(#15F5BA 295.2deg, white 0deg);">
+                                            <div class="progress_level">82점</div>
+                                        </div>
+                                    </div>
+                                    <div class="circle_score">
+                                        <h3 class="sub_title">유저추천</h3>
+                                        <div class="progress" style="background: conic-gradient(#15F5BA 316.8deg, white 0deg);">
+                                            <div class="progress_level">88%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="score_item">
+                                    <h2 class="title2">MetaCritic</h2>
+                                    <div class="circle_score">
+                                        <h3 class="sub_title">메타스코어</h3>
+                                        <div class="progress" style="background: conic-gradient(#15F5BA 288deg, white 0deg);">
+                                            <div class="progress_level">80점</div>
+                                        </div>
+                                    </div>
+                                    <div class="circle_score">
+                                        <h3 class="sub_title">유저평가</h3>
+                                        <div class="progress" style="background: conic-gradient(#15F5BA 295.2deg, white 0deg);">
+                                            <div class="progress_level">82%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo2 wrap_inner">
+                        <div class="recommend_visual">
+                            <div class="swiper-container swiper_recommend">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend01.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend02.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend03.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend04.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend05.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend06.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend07.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend08.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/lies/recommend09.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="trailer">
+                            <video autoplay muted loop controls poster="../images/ps/lies/video_thum.webp" preload="metadata">
+                                <source src="../images/ps/lies/lies_of_p_official_trailer(2022).mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션2] 게임 광고 01 -->
+                <section class="game_ad1">
+                    <div class="ad1_inner">
+                        <h2 class="title">2024년 최고의 기대 작품</h2>
+                        <div class="ad1_mo">
+                            <img src="../images/ps/ad/ad_01_mo.png" usemap="#image-map1">
+                            <map name="image-map1">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/the-last-of-us-part-ii-remastered/" coords="279,700,501,472,727,698,501,917" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/helldivers-2/" coords="758,233,534,460,760,681,980,457" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/like-a-dragon-infinite-wealth/" coords="503,958,727,738,953,965,727,1184" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/final-fantasy-vii-rebirth/" coords="980,503,753,726,978,953,1206,727" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/stellar-blade/" coords="1242,272,1018,496,1242,727,1471,498" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/prince-of-persia-the-lost-crown/" coords="984,988,1213,762,1440,988,1208,1219" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/tekken-8/" coords="1469,531,1242,757,1469,982,1695,755" shape="poly">
+                            </map>
+                        </div>
+                        <div class="ad1_pc">
+                            <img src="../images/ps/ad/ad1_01_pc.png" usemap="#image-map">
+                            <map name="image-map">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/helldivers-2/" coords="208,346,356,198,503,348,359,495" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/prince-of-persia-the-lost-crown/" coords="380,495,527,346,673,495,520,647" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/final-fantasy-vii-rebirth/" coords="486,273,635,126,782,271,635,423" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/stellar-blade/" coords="650,434,799,287,947,434,797,584" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/the-last-of-us-part-ii-remastered/" coords="821,273,967,126,1115,273,967,423" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/tekken-8/" coords="937,482,1084,333,1231,480,1083,627" shape="poly">
+                                <area target="_blank" alt="" title="" href="https://www.playstation.com/ko-kr/games/like-a-dragon-infinite-wealth/" coords="1118,348,1266,201,1413,346,1266,495" shape="poly">
+                            </map>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션3] 독점 게임 -->
+                <section class="exclusive">
+                    <h2 class="title">플레이스테이션 콘솔 독점 게임</h2>
+                    <div class="exclusive_visual">
+                        <div class="swiper-container swiper_exclusive">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_01.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>The Last of Us Part1</h2>
+                                                <p>
+                                                    감염으로 잔혹해진 생존자로 가득찬 황폐한 문명에서 삶에 지친 주인공 조엘은 군사 격리 구역에서 14살 소녀 엘리를 몰래 빼내기 위해 고용됩니다. 그러나 사소한 임무로 시작된 여정은 곧 국경을 넘나드는 잔인한 여정으로 변합니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_02.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>God of War : Ragnarok </h2>
+                                                <p>
+                                                    핌불의 겨울이 다가옵니다. 크레토스와 아트레우스는 아홉 영역을 탐험하며 답을 구하고, 아스가르드의 군세는 세상을 종말로 이끌 것이라 예언된 전쟁에 대비합니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_03.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>DEATH STRANDING</h2>
+                                                <p>
+                                                    미래에는 데스 스트랜딩으로 알려진 초자연적인 사건으로 산 자와 죽은 자 사이의 문이 열리고, 이로 인해 사후 세계의 생명체들이 고립으로 상처 입은 외로운 세상을 방황하게 됩니다. 
+                                                    샘 브리지스의 임무는, 망가진 미국에 생존하는 사람들을 연결하여 인류에게 희망을 전달하는 것입니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_04.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>HORIZON Forbidden West</h2>
+                                                <p>
+                                                    오직 에일로이만이 종말의 위협을 불러온 비밀을 파헤치고 세상에 질서와 균형을 가져올 수 있습니다. 먼 미래를 배경으로 한 호라이즌의 포스트 아포칼립스 세상에서 머나먼 땅을 탐험하고 더 거대해진 웅장한 기계들과 싸우고 놀랍고 새로운 부족과 조우하세요.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_05.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>UNCHARTED 4</h2>
+                                                <p>
+                                                    황금 사막의 아틀란티스의 사건으로부터 3년이 흐른 지금, 네이선 드레이크는 보물 사냥을 그만둔 듯했습니다. 하지만 죽었다고 생각했던 그의 형 샘이 자기 목숨을 위해 도움을 요청하며 결코 거절할 수 없는 모험을 제안하고, 그는 운명의 부름을 받습니다.  
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_06.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>Ratchet&Clank: Rift Apart</h2>
+                                                <p>
+                                                    라쳇, 클랭크와 함께 차원을 넘나들며 또 다른 현실의 사악한 황제를 상대하세요. 숨 막히는 속도로 눈부신 그래픽과 신나는 무기가 가득한 액션이 꽉 찬 세계를 탐험하세요. 
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_07.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>Returnal</h2>
+                                                <p>
+                                                    변화무쌍한 세계에 불시착한 셀린은 고대 문명의 척박한 지역을 수색하며 탈출구를 찾아야 합니다. 홀로 고립된 셀린은 생존하기 위해 목숨을 걸고 싸우게 됩니다. 셀린은 계속해서 죽음을 맞이하며, 죽을 때마다 여정을 새로 시작해야 합니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_08.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>MARVEL SPIDER-MAN 2</h2>
+                                                <p>
+                                                    여러분의 스파이더맨, 피터 파커와 마일즈 모랄레스가 비평가들의 찬사를 받은 마블 스파이더맨 프랜차이즈의 PS5 최신작으로 스릴 넘치는 새로운 모험과 함께 돌아옵니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_inner">
+                                        <a href="#none"><img src="../images/ps/exclusive/exclusive_09.jpg"></a>
+                                        <div class="txt_all">
+                                            <div class="text">
+                                                <h2>Demon’s Souls</h2>
+                                                <p>
+                                                    지금 볼레타리아는 외부 세계와 단절되고, 이 혼돈의 땅을 구하고자 용감하게 깊은 안개를 통과한 기사들은 자취를 감추고 말았습니다. 이제 이 사악한 안개에 용감하게 맞선 외로운 전사인 당신은, 가장 어려운 도전에 맞서 "데몬을 죽인 자"의 칭호를 얻고 고대 짐승을 다시 깊은 잠 속으로 돌려보내야 합니다.
+                                                </p>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="#none" class="inner">자세히보기</a>
+                                                <a href="#none" class="cart">장바구니</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션4] 게임 광고 02 -->
+                <section class="game_ad2">
+                    <div class="ad2_inner">
+                        <div class="ad2_bg">
+                            <a href="#none"><img src="../images/ps/ad/ad2_01.png"></a>
+                        </div>
+                        <div class="text">
+                            <h2>ELDEN RING</h2>
+                            <p>
+                                ELDEN RING의 힘을 휘두르고<br>
+                                틈새의 땅에서 엘데의 왕이 되세요.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션5] 베스트 게임 -->
+                <section class="best">
+                    <h2 class="title">BEST GAME</h2>
+                    <div class="best_item">
+                        <div class="wrap_inner">
+                            <ul class="items">
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_01.jpeg"></a>
+                                    <p>A Plague Tale :Requem</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_02.jpeg"></a>
+                                    <p>JEDI :Survivor</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_03.jpeg"></a>
+                                    <p>Lies of P</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_04.jpeg"></a>
+                                    <p>Call of Duty :Ghosts</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_05.jpeg"></a>
+                                    <p>Assassins Creed :Odyssey</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_06.jpeg"></a>
+                                    <p>Ditroit Become Human</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_07.jpeg"></a>
+                                    <p>Hogwarts Legacy</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_08.jpeg"></a>
+                                    <p>God of War :Ragnarok</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_09.jpg"></a>
+                                    <p>Elden Ring</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_10.jpeg"></a>
+                                    <p>The Last of Us Part1</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_11.jpeg"></a>
+                                    <p>Call of Duty :Modern Warfare</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_12.jpeg"></a>
+                                    <p>Assassins Creed :Stndicate</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_13.jpeg"></a>
+                                    <p>Guardians of The Galaxy</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_14.jpeg"></a>
+                                    <p>JEDI : Fallen Order </p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_15.jpeg"></a>
+                                    <p>Marvel Spider-Man 2</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_16.jpeg"></a>
+                                    <p>Diablo Ⅳ</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_17.jpeg"></a>
+                                    <p>Uncharted :Legacy</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_18.jpeg"></a>
+                                    <p>Beyond Two Souls</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_19.jpeg"></a>
+                                    <p>God of War</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_20.jpeg"></a>
+                                    <p>도라에몽 진구의 목장이야기</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_21.jpeg"></a>
+                                    <p>Ratchet & Clank</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_22.jpeg"></a>
+                                    <p>Call of Duty :Word WarⅡ</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_23.jpeg"></a>
+                                    <p>The Last of Us Part2</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_24.jpeg"></a>
+                                    <p>Dreamlight Valley</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_25.jpeg"></a>
+                                    <p>Biohazard Resident Evil</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_26.jpeg"></a>
+                                    <p>Marvel Spider-Man :Miles Morales</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_27.jpeg"></a>
+                                    <p>DiabloⅡ</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_28.jpeg"></a>
+                                    <p>Jurassic World :Evolution2</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_29.jpeg"></a>
+                                    <p>Little Nightmarres</p>
+                                </li>
+                                <li class="item">
+                                    <a href="#none"><img src="../images/ps/best/best_30.jpeg"></a>
+                                    <p>A Plague Tale :Innocence</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션6] 게임 광고 03 -->
+                <section class="game_ad3">
+                    <div class="ad3_inner cfixed">
+                        <div class="ad3_btn">
+                            <img src="../images/ps/ad/ad3_07.png">
+                            <a href="#none">
+                                3월 22일 출시! <br>
+                                예약구매하러 가기
+                            </a>
+                        </div>
+                        <div class="ad3_visual">
+                            <div class="swiper-container swiper_ad3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_01.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_02.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_03.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_04.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_05.jpg"></div>
+                                    <div class="swiper-slide"><img src="../images/ps/ad/ad3_06.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shake">
+                        <img src="../images/ps/ad/shake.webp">
+                        <div class="line"></div>
+                    </div>
+                </section>
+                <!-- [섹션7] 게임 광고 04 -->
+                <section class="game_ad4">
+                    <div class="ad4_bg">
+                        <img src="../images/ps/ad/ad4_bg.jpeg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>PlayStation5 슬림 출시</h2>
+                        <p>
+                            동일한 몰입감, <br>
+                            슬림해진 사이즈
+                        </p>
+                        <a href="#none">지금 바로 구매하기 ></a>
+                    </div>
+                    <div class="ad4_img">
+                        <img src="../images/ps/ad/ad4_01.png">
+                    </div>
+                </section>
+                <!-- [섹션8] 게임 광고 05 -->
+                <section class="game_ad5">
+                    <div class="flow_bnr">
+                        <div>
+                            <p>                        
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ad5_inner">
+                        <a href="#none" class="mo"><img src="../images/ps/ad/ad5_mo.jpg"></a>
+                        <a href="#none" class="pc"><img src="../images/ps/ad/ad5_pc.jpg"></a>
+                    </div>
+                    <div class="flow_bnr">
+                        <div>
+                            <p>                        
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                                <span>WoW Special Sale 85%</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- [섹션9] 자주 묻는 질문 -->
+                <section class="faq">
+                    <h2 class="title">자주 묻는 질문</h2>
+                    <div class="faq_inner">
+                        <div class="question">PS5에서 제 PS4 게임을 플레이할 수 있나요?<span>+</span></div>
+                        <div class="answer">
+                            예. PS5는 대부분의 PS4 대작 게임 하위 호환을 지원합니다. 즉 여러분의 기존 PS4 게임 콜렉션의 거의 대부분이 PS5에서 PS4만큼, 혹은 PS4보다 더 잘 구동된다는 뜻입니다. <br><br>
+                            PS5에서 구동되는 PS4 게임에 대해 더 자세히 알아보려면 이곳을 클릭하세요.
+                        </div>
+                        <div class="question">PS5 게임의 가격은 얼마인가요?<span>+</span></div>
+                        <div class="answer">
+                            PS5 게임 가격은 판매처와 타이틀에 따라 다릅니다. 선호하는 판매처에서 가격 정보를 확인하고, 최신 할인 정보를 보려면 <span>PlayStation Store</span>를 방문하세요.
+                        </div>
+                        <div class="question">PS5 게임은 어디서 구매할 수 있나요?<span>+</span></div>
+                        <div class="answer">
+                            모든 PS5 게임은 PlayStation Store에서 다운로드 버전으로 구입할 수 있습니다. 일부 PS5 게임은 온, 오프라인 판매처에서 디스크로 구입할 수도 있습니다.
+                        </div>
+                        <div class="question">PS5 게임을 하려면 온라인 연결이 필요한가요?<span>+</span></div>
+                        <div class="answer">
+                            일반적으로 PS5에서 게임을 할 때는 온라인 연결이 필요하지 않습니다. 하지만 일부 게임(특히 온라인 멀티플레이 전용 타이틀)은 제대로 작동하려면 인터넷 연결이 필요합니다. <br><br>
+                            일부 또는 전체 기능 때문에 인터넷 연결이 필요한 게임은 대개 제품 패키지(또는 온라인 구입 시 제품 목록 페이지)에 명시되어 있습니다. 구입 전에 항상 확인하세요. <br><br>
+                            PlayStation Store에서 다운로드 버전 게임을 다운로드하려면 온라인 연결이 필요합니다. <br><br>
+                            PS5를 인터넷에 연결하는 법을 알아보려면 <span>이곳을 클릭하세요</span>.
+                        </div>
+                        <div class="question">PS5 게임은 다운로드 전용인가요?<span>+</span></div>
+                        <div class="answer">
+                            아니요. PlayStation 5 게임 대다수는 디스크 에디션과 다운로드 에디션이 있습니다. 하지만 모든 게임이 디스크 버전으로 발매되는 것은 아니며 구입하는 에디션에 따라 다른 콘텐츠가 포함될 수도 있습니다. <br><br>
+                            각 게임의 배급사 또는 게임의 공식 웹사이트 등의 공식 자료에서 각 게임의 에디션을 확인하세요.
+                        </div>
+                        <div class="question">온라인으로 플레이하려면 PlayStation Plus가 필요한가요?<span>+</span></div>
+                        <div class="answer">
+                            네. 보통 PS4와 PS5용 온라인 멀티플레이 모드에 접속하려면 PlayStation Plus 정기 구독 서비스가 필요합니다.<br><br>
+                            PlayStation Plus를 이용한 온라인 멀티플레이에 관해 더 자세히 알아보려면 <span>이곳을 클릭하세요</span>.<br><br>
+                            PlayStation Plus 요금은 취소할 때까지 청구됩니다. 연령별 제한 사항이 적용됩니다. <span>전체 약관</span>을 확인하세요.
+                        </div>
+                        <div class="question">어떻게 PS5에서 게임을 공유할 수 있을까요?<span>+</span></div>
+                        <div class="answer">
+                            PlayStation 5에는 PlayStation Network를 통해 다른 PS4 및 PS5 플레이어와 화면을 공유할 수 있는 전용 셰어플레이 기능이 있습니다. <br><br>
+                            PS5 셰어플레이에 대해 더 자세히 알아보려면 <span>이곳을 클릭하세요</span>.
+                        </div>
+                        <div class="question">PS4 컨트롤러로 PS5 게임을 플레이할 수 있나요?<span>+</span></div>
+                        <div class="answer">
+                            PS5 게임은 햅틱 피드백과 적응형 트리거 같은 DualSense 무선 컨트롤러의 혁신적인 기능을 활용하도록 설계됩니다. DualShock 4 컨트롤러로는 이용할 수 없으므로, PS5 게임에는 DualSense 무선 컨트롤러가 필요합니다. <br><br>
+                            DualSense 컨트롤러에 대해 더 자세히 알아보려면 <span>이곳을 클릭하세요</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- ########### 하단 시작 ########### -->
+        <!-- 푸터 -->
+        <footer>
+            <div class="footer_inner">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../images/ps/logo_w_footer.png">
+                        <h2>PlayStation</h2>
+                    </a>
+                </div>
+                <!-- MO 정보메뉴 드롭 적용O -->
+                <ul class="all_menu_mo">
+                    <li>
+                        <p>정보<span>></span></p>
+                        <ul class="menu_cate_mo">
+                            <li><a href="#none">SIE 소개</a></li>
+                            <li><a href="#none">커리어</a></li>
+                            <li><a href="#none">PlayStation Studios</a></li>
+                            <li><a href="#none">PlayStation Produtions</a></li>
+                            <li><a href="#none">기업</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>제품<span>></span></p>
+                        <ul class="menu_cate_mo">
+                            <li><a href="#none">PS5</a></li>
+                            <li><a href="#none">PS4</a></li>
+                            <li><a href="#none">PS VR2</a></li>
+                            <li><a href="#none">PS Plus</a></li>
+                            <li><a href="#none">액세서리</a></li>
+                            <li><a href="#none">게임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>가치<span>></span></p>
+                        <ul class="menu_cate_mo">
+                            <li><a href="#none">환경</a></li>
+                            <li><a href="#none">접근성</a></li>
+                            <li><a href="#none">온라인 안전</a></li>
+                            <li><a href="#none">다양성, 공평함과 포용성</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>지원<span>></span></p>
+                        <ul class="menu_cate_mo">
+                            <li><a href="#none">지원 허브</a></li>
+                            <li><a href="#none">PlayStation 보안</a></li>
+                            <li><a href="#none">PSN 상태</a></li>
+                            <li><a href="#none">PlayStation Repairs</a></li>
+                            <li><a href="#none">비밀번호 재설정</a></li>
+                            <li><a href="#none">사용설명서 다운로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>연결<span>></span></p>
+                        <ul class="menu_cate_mo">
+                            <li><a href="#none">페이스북</a></li>
+                            <li><a href="#none">인스타</a></li>
+                            <li><a href="#none">유튜브</a></li>
+                            <li><a href="#none">네이버 포스트</a></li>
+                            <li><a href="#none">카카오톡 플러스 친구</a></li>
+                            <li><a href="#none">iOS 앱</a></li>
+                            <li><a href="#none">Android 앱</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- PC 정보메뉴 드롭 적용X -->
+                <ul class="all_menu_pc">
+                    <li>
+                        <p>정보</p>
+                        <ul class="menu_cate_pc">
+                            <li><a href="#none">SIE 소개</a></li>
+                            <li><a href="#none">커리어</a></li>
+                            <li><a href="#none">PlayStation Studios</a></li>
+                            <li><a href="#none">PlayStation Produtions</a></li>
+                            <li><a href="#none">기업</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>제품</p>
+                        <ul class="menu_cate_pc">
+                            <li><a href="#none">PS5</a></li>
+                            <li><a href="#none">PS4</a></li>
+                            <li><a href="#none">PS VR2</a></li>
+                            <li><a href="#none">PS Plus</a></li>
+                            <li><a href="#none">액세서리</a></li>
+                            <li><a href="#none">게임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>가치</p>
+                        <ul class="menu_cate_pc">
+                            <li><a href="#none">환경</a></li>
+                            <li><a href="#none">접근성</a></li>
+                            <li><a href="#none">온라인 안전</a></li>
+                            <li><a href="#none">다양성, 공평함과 포용성</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>지원</p>
+                        <ul class="menu_cate_pc">
+                            <li><a href="#none">지원 허브</a></li>
+                            <li><a href="#none">PlayStation 보안</a></li>
+                            <li><a href="#none">PSN 상태</a></li>
+                            <li><a href="#none">PlayStation Repairs</a></li>
+                            <li><a href="#none">비밀번호 재설정</a></li>
+                            <li><a href="#none">사용설명서 다운로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>연결</p>
+                        <ul class="menu_cate_pc">
+                            <li><a href="#none">페이스북</a></li>
+                            <li><a href="#none">인스타</a></li>
+                            <li><a href="#none">유튜브</a></li>
+                            <li><a href="#none">네이버 포스트</a></li>
+                            <li><a href="#none">카카오톡 플러스 친구</a></li>
+                            <li><a href="#none">iOS 앱</a></li>
+                            <li><a href="#none">Android 앱</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="wrap_inner2">
+                    <div class="company_info">
+                        <p>회사명 : Sony Interactive Entertainment Inc.</p>
+                        <p>대표 : 타이노사토시, 이소정</p>
+                        <p>고객센터 TEL : 070-4732-6748</p>
+                        <p>이메일 : sie-ko-personalinfo@sony.com</p>
+                        <p>주소 : 1-7-1 Korean, Minato-ku,Tokyo, 108-0075 Japan</p>
+                        <p>사업자등록번호 : 106-86-02673</p>
+                        <p>통신판매업신고 : 2015-서울강남-02049</p>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2024 Sony Interactive Entertainment LLC</p>
+                        <p>
+                            모든 콘텐츠, 게임 타이틀, 상호 및 <br class="mo">
+                            또는 상품 외장, 상표, 아트워크, 관련 이미지는 <br> 
+                            각 소유주의 상표권 및 또는 저작권을 가진 자료입니다. <br>
+                            All rights reserved. <a href="#none">추가정보</a>
+                        </p>
+                    </div>
+                </div>
+                <ul class="sign">
+                    <li><a href="#none">법적고지 |</a></li>
+                    <li><a href="#none">개인정보 처리방침 |</a></li>
+                    <li><a href="#none">웹사이트 이용약관 |</a></li>
+                    <li><a href="#none">사이트맵</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- go to top 버튼 -->
+        <div class="btn_scroll"><a href="#" class="up" onclick="scrollup()">up</a></div>
+        <!-- 내비게이션 클릭시 배경 흐리게 -->
+        <div id="dimmed"></div>
+    </div>
+</body>
+</html>
